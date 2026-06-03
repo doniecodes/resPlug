@@ -14,6 +14,5 @@ export const globalStyles = StyleSheet.create({
   title : {
     fontSize: 30,
     fontWeight: "bold",
-    color: "#fff"
   }
 })

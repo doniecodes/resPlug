@@ -1,24 +1,32 @@
+import { StatusBar } from 'expo-status-bar';
+
 import { useColorScheme } from "react-native"
 import { Colors } from "../../constants/Colors"
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons"
+import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 
 
 export default function TabLayout () {
   
   const colorScheme = useColorScheme()
-  const theme = Colors[colorScheme] ?? Colors.light;
+  //const theme = Colors[colorScheme] ?? Colors.light;
+  const theme = Colors.light;
+  
+  const insets = useSafeAreaInsets();
 
   
   return (
     <>
+    <StatusBar style="dark-content" hidden={false}/>
     <Tabs screenOptions ={{
     headerShown: false,
     tabBarShowLabel: false,
       tabBarStyle: {
         backgroundColor: theme.navBackground,
-        paddingTop: 10,
-        height: 110
+        paddingTop: 7,
+        height: 50 + insets.bottom,
+        paddingBottom: insets.bottom
       },
       tabBarActiveTintColor: theme.iconColorFocused,
       tabBarInactiveTintColor: theme.iconColor

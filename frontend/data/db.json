@@ -1,0 +1,254 @@
+{
+  "posts": [
+    {
+      "id": "post_001",
+      "user": {
+        "id": "user_001",
+        "username": "doniecode",
+        "full_name": "Donie Code",
+        "avatar_url": "https://example.com/avatars/doniecode.jpg",
+        "residence": "Monroe Gardens Res",
+        "is_verified": true
+      },
+      "title": "Come learn to code at block 4",
+      "description": "We're hosting a beginner-friendly coding session tonight at Block 4. Bring your laptop and come learn web development basics.",
+      "image_url": "https://example.com/posts/code-event.jpg",
+      "categories": ["Study", "Food"],
+      "stats": {
+        "likes": 21,
+        "replies": 9,
+        "replugs": 6,
+        "shares": 3,
+        "views": 145
+      },
+      "is_liked": false,
+      "is_replugged": false,
+      "created_at": "2026-06-02T14:43:00Z"
+    },
+    {
+      "id": "post_002",
+      "user": {
+        "id": "user_002",
+        "username": "kayla_m",
+        "full_name": "Kayla Mokoena",
+        "avatar_url": "https://example.com/avatars/kayla.jpg",
+        "residence": "Campus Heights",
+        "is_verified": false
+      },
+      "title": "Movie night at the common room 🎬",
+      "description": "We're watching Spider-Man tonight at 8PM. Snacks and drinks available.",
+      "image_url": "https://example.com/posts/movie-night.jpg",
+      "categories": ["Entertainment", "Social"],
+      "stats": {
+        "likes": 56,
+        "replies": 14,
+        "replugs": 11,
+        "shares": 8,
+        "views": 420
+      },
+      "is_liked": true,
+      "is_replugged": false,
+      "created_at": "2026-06-02T13:15:00Z"
+    },
+    {
+      "id": "post_003",
+      "user": {
+        "id": "user_003",
+        "username": "chefleo",
+        "full_name": "Leo Daniels",
+        "avatar_url": "https://example.com/avatars/leo.jpg",
+        "residence": "Monroe Gardens Res",
+        "is_verified": false
+      },
+      "title": "Free burgers in Block C 🍔",
+      "description": "Made too many burgers for lunch. Come through before they're gone.",
+      "image_url": "https://example.com/posts/burgers.jpg",
+      "categories": ["Food"],
+      "stats": {
+        "likes": 88,
+        "replies": 22,
+        "replugs": 18,
+        "shares": 12,
+        "views": 710
+      },
+      "is_liked": true,
+      "is_replugged": true,
+      "created_at": "2026-06-02T12:20:00Z"
+    },
+    {
+      "id": "post_004",
+      "user": {
+        "id": "user_004",
+        "username": "nina.codes",
+        "full_name": "Nina Peterson",
+        "avatar_url": "https://example.com/avatars/nina.jpg",
+        "residence": "Sunset Residence",
+        "is_verified": true
+      },
+      "title": "React Native workshop tomorrow",
+      "description": "Teaching navigation, API calls and clean UI practices for beginners.",
+      "image_url": "https://example.com/posts/react-native.jpg",
+      "categories": ["Study", "Tech"],
+      "stats": {
+        "likes": 74,
+        "replies": 16,
+        "replugs": 20,
+        "shares": 9,
+        "views": 530
+      },
+      "is_liked": false,
+      "is_replugged": true,
+      "created_at": "2026-06-01T18:00:00Z"
+    },
+    {
+      "id": "post_005",
+      "user": {
+        "id": "user_005",
+        "username": "fitwithsam",
+        "full_name": "Sam Nkosi",
+        "avatar_url": "https://example.com/avatars/sam.jpg",
+        "residence": "Riverwalk Res",
+        "is_verified": false
+      },
+      "title": "Morning jog group 🏃",
+      "description": "Meeting at the main gate at 6AM. Everyone is welcome.",
+      "image_url": "https://example.com/posts/jogging.jpg",
+      "categories": ["Fitness", "Social"],
+      "stats": {
+        "likes": 34,
+        "replies": 5,
+        "replugs": 4,
+        "shares": 2,
+        "views": 190
+      },
+      "is_liked": false,
+      "is_replugged": false,
+      "created_at": "2026-06-01T05:30:00Z"
+    },
+    {
+      "id": "post_006",
+      "user": {
+        "id": "user_006",
+        "username": "djstorm",
+        "full_name": "Storm M",
+        "avatar_url": "https://example.com/avatars/storm.jpg",
+        "residence": "Campus Heights",
+        "is_verified": true
+      },
+      "title": "Friday night groove 🔥",
+      "description": "Live DJ set at the rooftop lounge this Friday from 9PM till late.",
+      "image_url": "https://example.com/posts/party.jpg",
+      "categories": ["Entertainment", "Music"],
+      "stats": {
+        "likes": 140,
+        "replies": 39,
+        "replugs": 44,
+        "shares": 26,
+        "views": 1200
+      },
+      "is_liked": true,
+      "is_replugged": true,
+      "created_at": "2026-05-31T21:10:00Z"
+    },
+    {
+      "id": "post_007",
+      "user": {
+        "id": "user_007",
+        "username": "bookworm",
+        "full_name": "Alicia Reed",
+        "avatar_url": "https://example.com/avatars/alicia.jpg",
+        "residence": "Greenfield Res",
+        "is_verified": false
+      },
+      "title": "Selling second-hand textbooks",
+      "description": "Computer science and mathematics textbooks available at good prices.",
+      "image_url": "https://example.com/posts/books.jpg",
+      "categories": ["Marketplace", "Study"],
+      "stats": {
+        "likes": 29,
+        "replies": 18,
+        "replugs": 7,
+        "shares": 5,
+        "views": 310
+      },
+      "is_liked": false,
+      "is_replugged": false,
+      "created_at": "2026-05-31T11:40:00Z"
+    },
+    {
+      "id": "post_008",
+      "user": {
+        "id": "user_008",
+        "username": "thebaker",
+        "full_name": "Mia Jacobs",
+        "avatar_url": "https://example.com/avatars/mia.jpg",
+        "residence": "Sunrise Apartments",
+        "is_verified": false
+      },
+      "title": "Fresh muffins available 🧁",
+      "description": "Chocolate and blueberry muffins baked this morning. DM to order.",
+      "image_url": "https://example.com/posts/muffins.jpg",
+      "categories": ["Food", "Marketplace"],
+      "stats": {
+        "likes": 63,
+        "replies": 12,
+        "replugs": 10,
+        "shares": 4,
+        "views": 470
+      },
+      "is_liked": true,
+      "is_replugged": false,
+      "created_at": "2026-05-30T09:15:00Z"
+    },
+    {
+      "id": "post_009",
+      "user": {
+        "id": "user_009",
+        "username": "gamerzone",
+        "full_name": "Chris Molefe",
+        "avatar_url": "https://example.com/avatars/chris.jpg",
+        "residence": "Monroe Gardens Res",
+        "is_verified": true
+      },
+      "title": "FIFA tournament this weekend 🎮",
+      "description": "Winner takes R500 and bragging rights for the semester.",
+      "image_url": "https://example.com/posts/fifa.jpg",
+      "categories": ["Gaming", "Entertainment"],
+      "stats": {
+        "likes": 92,
+        "replies": 25,
+        "replugs": 19,
+        "shares": 15,
+        "views": 860
+      },
+      "is_liked": false,
+      "is_replugged": true,
+      "created_at": "2026-05-29T16:45:00Z"
+    },
+    {
+      "id": "post_010",
+      "user": {
+        "id": "user_010",
+        "username": "studyqueen",
+        "full_name": "Lebo Sithole",
+        "avatar_url": "https://example.com/avatars/lebo.jpg",
+        "residence": "Riverwalk Res",
+        "is_verified": false
+      },
+      "title": "Exam prep group tonight 📚",
+      "description": "Accounting revision session at the study hall from 7PM to 10PM.",
+      "image_url": "https://example.com/posts/study-group.jpg",
+      "categories": ["Study"],
+      "stats": {
+        "likes": 48,
+        "replies": 13,
+        "replugs": 9,
+        "shares": 6,
+        "views": 390
+      },
+      "is_liked": true,
+      "is_replugged": false,
+      "created_at": "2026-05-28T17:20:00Z"
+    }
+  ]
+}

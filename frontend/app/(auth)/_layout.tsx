@@ -11,7 +11,7 @@ const AuthLayout = () => {
   
   return (
     <>
-      <StatusBar value="auto" />
+      <StatusBar style="dark-content" hidden={false}/>
       <Stack screenOptions = {{
         animation: "none",
         headerStyle: {

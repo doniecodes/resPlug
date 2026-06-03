@@ -1,4 +1,6 @@
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+
 import { useColorScheme } from 'react-native'
 import { Colors } from '../constants/Colors'
 
@@ -9,16 +11,22 @@ import ThemedText from '../components/ThemedText';
 import ThemedView from '../components/ThemedView';
 import Signup from './(auth)/signup';
 
+import logo from '../assets/images/resplug.png';
+
 
 const Home = () => {
   
   const colorScheme = useColorScheme()
-  const theme = Colors[colorScheme] ?? Colors.light;
+  //const theme = Colors[colorScheme] ?? Colors.light;
+  const theme = Colors.light;
   
   return (
     <>
-      {/*<Signup />*/}
-    <ThemedView style={styles.container}>
+      
+    <ThemedView safe={true} style={styles.container}>
+      
+      <Image source={logo}
+      style={styles.logo} />
       <ThemedText title={true} style={styles.heading}>
         resPlug
       </ThemedText>
@@ -67,5 +75,12 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: Colors.underline,
     marginVertical: 10,
+  },
+  logo: {
+    height: 200,
+    width: 200,
+    borderRadius: 6,
+    borderColor: Colors.light.text,
+    borderWidth: 2,
   }
 });

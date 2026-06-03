@@ -18,8 +18,8 @@ export const Colors = {
   light: {
     text: "#333",
     title: "#201e2b",
-    background: "#e0dfe8",
-    navBackground: "#e8e7ef",
+    background: "#f8f8f8",
+    navBackground: "#f8f8f8",
     iconColor: "#686477",
     iconColorFocused: "#201e2b",
     uiBackground: "#d6d5e1"
