@@ -1,9 +1,10 @@
+import FeedsHook from '../../hooks/FeedsHook';
 import FeedCard from '../../components/FeedCard';
 //import Filters from '../../components/Filters';
 
 import { StyleSheet, Text, View,
-Pressable, ScrollView, SafeAreaView } from 'react-native';
-import { useState } from 'react';
+Pressable, ScrollView, SafeAreaView, FlatList } from 'react-native';
+import { useState, useEffect } from 'react';
 
 import Header from '../../components/Header';
 import ThemedText from '../../components/ThemedText';
@@ -20,13 +21,32 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const Home = () => {
   
+    //getFeeds Function
+  useEffect(()=> {
+    const getData = async ()=> {
+      try{
+      const data = await getFeeds();
+      setFeeds(data);
+      }catch(error){
+        console.log(error);
+      }
+    }
+    getData();
+  }, []);
+  
+    //states
+  const [ focused, setFocused ] = useState(false);
+  const [ feeds, setFeeds ] = useState(null);
+  
+    //hooks 
+  const { getFeeds, error, loading } = FeedsHook();
+  
    //colorScheme
   const colorScheme = useColorScheme();
   //const theme = Colors[colorScheme] ?? Colors.light;
   const theme = Colors.light;
   
-  //states
-  const [ focused, setFocused ] = useState(false);
+
   
   //safe area contexts
   const insets = useSafeAreaInsets();
@@ -34,10 +54,16 @@ const Home = () => {
   //user
   const username = "doniecode";
   
-  return (
-    <>
-      <View style={{paddingTop: insets.top}}>
-      <ScrollView style={[{backgroundColor: theme.background}, styles.body]}>
+  //feedsElements
+  const feedsElements = feeds !== null && feeds;
+  console.log(feedsElements);
+  
+  //Screen Header
+  const ScreenHeader = ()=> {
+    return (
+      <View
+      style={{backgroundColor: theme.background,
+      paddingTop: insets.top}}>
         
       <Header />
       
@@ -47,20 +73,33 @@ const Home = () => {
         </ThemedText>
       </ThemedView>
       
-      {/*Filters list*/}
-      
-      
+      </View>
+      )
+  }
+  
+  return (
+    <>
       {/*Feed Posts*/}
-      <View style={styles.feedsContainer}>
-        <FeedCard />
-        <FeedCard />
-        <FeedCard />
-        <FeedCard />
-        <FeedCard />
-      </View>
-      
-      </ScrollView>
-      </View>
+        <FlatList
+        ListHeaderComponent={ScreenHeader}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.feedsContainer}
+        data={feedsElements}
+        keyExtractor = {(item)=> item.id}
+        renderItem={({item})=> (
+          <FeedCard
+          key={item.id}
+          id={item.id}
+          image={item.user.avatar_url}
+          username={item.user.username}
+          residence={item.user.residence}
+          title={item.title}
+          desc={item.description}
+          categories={item.categories}
+          stats={item.stats}
+          />
+          )}
+        />
     </>
   );
 };
@@ -68,10 +107,9 @@ const Home = () => {
 export default Home;
 
 const styles = StyleSheet.create({
-  body: {
-  },
   containerGreeting: {
-    paddingVertical:  5,
+    paddingVertical: 8,
+    marginBottom: 5,
     //borderBottomWidth: 1,
     //borderBottomColor: "#e5e5e5"
   },
@@ -88,11 +126,12 @@ const styles = StyleSheet.create({
   feedsContainer: {
     width: "100%",
     paddingBottom: 30,
-    paddingTop: 10,
+    paddingTop: 3,
     paddingHorizontal: 3,
     flexDirection: 'column',
-    gap: 20,
+    gap: 5,
     marginHorizontal: "auto",
-    marginVertical: 0
+    marginVertical: 0,
+    backgroundColor: '#f8f8f8',
   }
 });

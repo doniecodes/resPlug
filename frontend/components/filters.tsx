@@ -12,10 +12,9 @@ const Filters = () => {
   //handle getFeeds function
   useEffect(()=> {
   const getFeeds = async () => {
-    
   }
   getFeeds();
-  )}
+  }, [])
   
   return (
     <ThemedView>

@@ -1,3 +1,8 @@
+import { FeedsContextProvider }
+from '../contexts/FeedsContext';
+import { MarketContextProvider }
+from '../contexts/MarketContext';
+
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 
@@ -16,9 +21,12 @@ const RootLayout = ()=> {
 
   return (
     <>
+      <FeedsContextProvider>
+      <MarketContextProvider>
       <SafeAreaProvider>
       <StatusBar style="dark-content" hidden={false}/>
       <Stack screenOptions = {{
+        animation: "none",
         headerStyle: {
           backgroundColor: theme.navBackground,
         },
@@ -33,8 +41,12 @@ const RootLayout = ()=> {
         
         <Stack.Screen name="(screens)" options={{headerShown: false}} />
         
+        <Stack.Screen name="(marketplace)" options={{headerShown: false}} />
+        
       </Stack>
       </SafeAreaProvider>
+      </MarketContextProvider>
+      </FeedsContextProvider>
     </>
 )
 }

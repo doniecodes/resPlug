@@ -1,3 +1,4 @@
+import FeedChips from './FeedChips';
 import ThemedText from './ThemedText';
 import ThemedView from './ThemedView';
 
@@ -15,7 +16,10 @@ import { Ionicons } from "@expo/vector-icons";
 import pic5 from "../assets/images/pic5.jpg";
 import image1 from "../assets/images/doniecode.png";
 
-const FeedCard = () => {
+const FeedCard = ({
+  image, username, residence,
+  title, desc, categories, stats, id
+  }) => {
   
   //states
   const [ user, setUser ] = useState({
@@ -23,8 +27,6 @@ const FeedCard = () => {
     res: "Monroe Gardens Res"
   });
   const [ liked, setLiked ] = useState(false);
-  const [ desc, setDesc ] = useState(
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
   
    //colorScheme
   const colorScheme = useColorScheme();
@@ -45,25 +47,28 @@ const FeedCard = () => {
     <ThemedView style={styles.card}>
       <View style={styles.infoContainer}>
         <View style={styles.infoContainerLeft}>
-        <Image source={image1} style={styles.userImage} />
-        <View style={styles.userInfo}>
+          <Image source={image1} style={styles.userImage} />
+          <View style={styles.userInfo}>
           <ThemedText title={true} style={styles.name}>
-            {user.username}
+            @{username}
           </ThemedText>
-          <ThemedText style={styles.res}>
+          <View style={styles.res}>
             <Ionicons
             size={13}
             name="business-outline"
+            color={theme.resIconColor}
             />
-            <Text>
-              {user.res}
+            <Text style={styles.resName}>
+              {residence}
             </Text>
-          </ThemedText>
-        </View>
+          </View>
+          </View>
         </View>
         
         <View style={styles.infoContainerRight}>
-          <Pressable>
+          <Pressable
+          style={({pressed})=> [styles.optionsBtn, pressed && styles.pressed]}
+          >
             <Ionicons
             size={25}
             name="ellipsis-vertical"
@@ -74,32 +79,19 @@ const FeedCard = () => {
       </View>
       
       <View style={styles.cardChips}>
-        <Text style={styles.chip}>
-          <Ionicons
-          size={12}
-          name="book-outline"
-          color="inherit"
-          />
-          <Text>Study</Text>
-        </Text>
-        <Text style={styles.chip}>
-          <Ionicons
-          size={12}
-          name="pizza-outline"
-          color="inherit"
-          />
-          <Text>Food</Text>
-        </Text>
+        <View style={styles.chip}>
+          <FeedChips categories={categories} />
+        </View>
       </View>
       
       <View style={styles.postContent}>
         <Image source={pic5} style={styles.postImage} />
         <ThemedText title={true}
         style={styles.postTitle}>
-          Come learn to code at block 4
+          {title}
         </ThemedText>
         <ThemedText style={styles.postDescription}>
-         { desc.length > 50 ?
+         { desc && desc.length > 90 ?
          <ThemedText>
            {subDesc}
             <ThemedText
@@ -125,7 +117,7 @@ const FeedCard = () => {
             style={styles.textBold}>
               Like
             </ThemedText>
-            <ThemedText style={styles.btnCount}>21</ThemedText>
+            <ThemedText style={styles.btnCount}>{stats.likes}</ThemedText>
           </View>
         </Pressable>
         <Pressable style={styles.replyBtn}>
@@ -139,7 +131,7 @@ const FeedCard = () => {
             style={styles.textBold}>
               Reply
             </ThemedText>
-            <ThemedText style={styles.btnCount}>9</ThemedText>
+            <ThemedText style={styles.btnCount}>{stats.replies}</ThemedText>
           </View>
         </Pressable>
         <Pressable style={styles.reshareBtn}>
@@ -153,7 +145,7 @@ const FeedCard = () => {
             style={styles.textBold}>
               RePlug
             </ThemedText>
-            <ThemedText style={styles.btnCount}>6</ThemedText>
+            <ThemedText style={styles.btnCount}>{stats.replugs}</ThemedText>
           </View>
         </Pressable>
       </View>
@@ -172,7 +164,8 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     gap: 3,
-    boxShadow: '0px 2px 15px rgba(0, 0, 0, 0.10)',
+    boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.10), -0px -5px 20px rgba(0, 0, 0, 0.10)',
+    marginBottom: 10,
   },
   infoContainer: {
     flexDirection: 'row',
@@ -204,10 +197,12 @@ const styles = StyleSheet.create({
   res: {
     flexDirection: 'row',
     alignItems: 'center',
+    gap: 3
+  },
+  resName: {
     fontSize: 13,
-    color: "#717b89",
     fontWeight: '500',
-    gap: 4
+    color: "#717b89",
   },
   cardChips: {
     flexDirection: 'row',
@@ -221,7 +216,8 @@ const styles = StyleSheet.create({
     gap: 4,
     paddingVertical: 1,
     paddingHorizontal: 10,
-    borderRadius: 10
+    borderRadius: 10,
+    //marginRight: 10,
   },
   infoContainerRight: {
     
@@ -285,5 +281,14 @@ const styles = StyleSheet.create({
   },
   btnCount: {
     fontSize: 10,
+  },
+  optionsBtn: {
+    paddingHorizontal: 3,
+    paddingVertical: 3,
+  },
+  pressed: {
+    backgroundColor: '#e5e5e5',
+    paddingHorizontal: 3,
+    borderRadius: 8,
   }
 });

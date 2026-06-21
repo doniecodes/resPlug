@@ -9,8 +9,8 @@ export default function ThemedTextInput({ style, ...props }) {
     <TextInput 
       style={[
         {
-          backgroundColor: theme.uiBackground, 
-          color: theme.text,
+          backgroundColor: theme.inputBackground, 
+          color: theme.title,
           padding: 20,
           borderRadius: 6,
         }, 

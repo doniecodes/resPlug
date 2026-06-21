@@ -20,6 +20,7 @@ const _layout = () => {
     <>
       <StatusBar style="dark-content" hidden={false}/>
       <Stack screenOptions = {{
+      animation: "none",
         headerStyle: {
           backgroundColor: theme.background
         },
@@ -29,6 +30,13 @@ const _layout = () => {
         <Stack.Screen
         name = "settings"
         options = {{title: "Settings"}}
+        />
+        
+        <Stack.Screen
+        name = "sell-item"
+        options = {{title: "Sell Item",
+          headerShown: false
+        }}
         />
         
       </Stack>
