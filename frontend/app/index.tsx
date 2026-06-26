@@ -28,7 +28,10 @@ const Home = () => {
       <Image source={logo}
       style={styles.logo} />
       <ThemedText title={true} style={styles.heading}>
-        resPlug
+        res
+        <ThemedText title={true} style={styles.subHeading}>
+        Plug
+        </ThemedText>
       </ThemedText>
       
       <ThemedText>
@@ -71,6 +74,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginVertical: 20,
   },
+  subHeading: {
+    fontSize: 30,
+    fontWeight: "bold",
+    color: "#6D28B9",
+  },
   link: {
     borderBottomWidth: 1,
     borderBottomColor: Colors.underline,
@@ -80,7 +88,7 @@ const styles = StyleSheet.create({
     height: 200,
     width: 200,
     borderRadius: 6,
-    borderColor: Colors.light.text,
+    borderColor: "#6D28B9",
     borderWidth: 2,
   }
 });

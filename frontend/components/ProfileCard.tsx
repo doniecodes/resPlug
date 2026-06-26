@@ -1,12 +1,16 @@
 import ThemedText from './ThemedText';
 import ThemedView from './ThemedView';
 
+import { useState } from 'react'
+
 import { useColorScheme } from 'react-native'
 import { Colors } from '../constants/Colors'
 
 import { StyleSheet, Text,
-View, Image, Pressable } from 'react-native';
+View, Image, Pressable, Alert } from 'react-native';
 import { Ionicons } from "@expo/vector-icons"
+
+import * as ImagePicker from "expo-image-picker";
 
 import doniecode from '../assets/images/doniecode.png';
 
@@ -15,25 +19,47 @@ const ProfileCard = () => {
   //states
   const fullName = "Donald Zarura";
   const username = "doniecode";
+  const [ avatar, setAvatar ] = useState<string | null>(null);
   
   //colorScheme
   const colorScheme = useColorScheme();
   //const theme = Colors[colorScheme] ?? Colors.light;
   const theme = Colors.light;
   
+  const handleAvatar = async ()=> {
+    const permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    
+    if(!permissionResult.granted){
+      Alert.alert("Permission required", "permission to access the media library is denied");
+    }
+      const result = await ImagePicker.launchImageLibraryAsync({
+        mediaTypes: ["images"],
+        allowsEditing: true,
+        selectionLimit: 1,
+        aspect: [16, 16],
+        quality: 1
+      });
+      
+      if(!result.canceled){
+        setAvatar(result.assets[0].uri);
+      }
+  }
+  
   return (
     <ThemedView style={styles.cardWrapper}>
       <View style={styles.imageWrapper}>
         <Image
         style={styles.avatar}
-        source={doniecode} />
-        <View style={styles.cameraIcon}>
+        source={{ uri: avatar }} />
+        <Pressable
+        onPress={handleAvatar}
+        style={styles.cameraIcon}>
           <Ionicons
           size={18}
           name="camera"
-          color="purple"
+          color="#6D28B9"
           />
-        </View>
+        </Pressable>
       </View>
       
       <View style={styles.contentWrapper}>
@@ -86,6 +112,7 @@ export default ProfileCard;
 const styles = StyleSheet.create({
   cardWrapper: {
     flexDirection: 'row',
+    alignItems: 'center',
     justifyContent: 'left',
     gap: 20
   },
@@ -97,19 +124,18 @@ const styles = StyleSheet.create({
     paddingVertical: 4,
     paddingHorizontal: 4,
     borderWidth: 1.5,
-    borderColor: "purple",
+    borderColor: "#6D28B9",
     //borderColor: "#c9c9c9",
     borderRadius: 100,
     position: "absolute",
-    bottom: 15,
-    right: -5
+    bottom: 3,
+    right: -6
   },
   avatar: {
     width: 90,
     height: 90,
     borderWidth: 2,
-    //borderColor: 'purple',
-    borderColor: '#e1e1e1',
+    borderColor: '#d4d4d4',
     borderRadius: 100,
   },
   contentWrapper: {

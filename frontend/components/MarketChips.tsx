@@ -20,7 +20,6 @@ const MarketChips = ({
     horizontal
     showsHorizontalScrollIndicator={false}>
     <ThemedView style={styles.chips}>
-      
       {
       categories.map((category)=> {
       const isSelected = activeCategory === category;
@@ -67,7 +66,7 @@ const styles = StyleSheet.create({
     color: "#fff"
   },
   activeBtn: {
-    backgroundColor: 'purple',
+    backgroundColor: "#6D28B9",
     color: "#fff"
   },
   activeText: {

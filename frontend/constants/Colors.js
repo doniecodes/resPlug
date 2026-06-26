@@ -1,8 +1,11 @@
 export const Colors = {
   //primary: "#6849a7",
-  primary: "#6C4DFF",
+  primary: "#6D28B9",
   warning: "#cc475a",
-  purple2: "#6C5CE7",
+  Secondary: "#6B7280",
+  border: "#E5E7EB",
+  success: "#16A34A",
+  error: "#DC2626",
   
   dark: {
     accent: "#4DA6FF",
@@ -24,6 +27,7 @@ export const Colors = {
     navBackground: "#f8f8f8",
     iconColor: "#686477",
     iconColorFocused: "#201e2b",
+    iconColorFocused2: "#6D28B9",
     uiBackground: "#d6d5e1",
     inputBackground: "#e4e4e4",
     resIconColor: "#717b89"

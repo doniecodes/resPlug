@@ -79,10 +79,151 @@ const FeedCard = ({
       </View>
       
       <View style={styles.cardChips}>
-        <View style={styles.chip}>
-          <FeedChips categories={categories} />
+      <View style={styles.chip}>
+     <View style={styles.chipIcon}>
+          { categories[0] === "Study" &&
+              <Ionicons
+              size={13}
+              name="book-outline"
+              color={theme.title}
+              />
+              }
+          { categories[0] === "Food" &&
+              <Ionicons
+              size={13}
+              name="pizza-outline"
+              color={theme.title}
+              />
+              }
+          { categories[0] === "Entertainment" &&
+              <Ionicons
+              size={13}
+              name="film-outline"
+              color={theme.title}
+              />
+              }
+          { categories[0] === "Fitness" &&
+              <Ionicons
+              size={13}
+              name="fitness-outline"
+              color={theme.title}
+              />
+              }
+          { categories[0] === "Social" &&
+              <Ionicons
+              size={13}
+              name="people-outline"
+              color={theme.title}
+              />
+              }
+          { categories[0] === "Marketplace" &&
+              <Ionicons
+              size={13}
+              name="pricetag-outline"
+              color={theme.title}
+              />
+              }
+          { categories[0] === "Gaming" &&
+              <Ionicons
+              size={13}
+              name="game-controller-outline"
+              color={theme.title}
+              />
+              }
+          { categories[0] === "Tech" &&
+              <Ionicons
+              size={13}
+              name="laptop-outline"
+              color={theme.title}
+              />
+              }
+          { categories[0] === "Music" &&
+              <Ionicons
+              size={13}
+              name="musical-notes-outline"
+              color={theme.title}
+              />
+              }
+          </View>
+          <ThemedText style={styles.chipName}>
+            {categories[0]}
+          </ThemedText>
         </View>
+        
+          { categories[1] !== null && categories.length !== 1 &&
+        <View style={styles.chip}>
+            <View style={styles.chipIcon}>
+          { categories[1] === "Study" &&
+              <Ionicons
+              size={13}
+              name="book-outline"
+              color={theme.title}
+              />
+              }
+          { categories[1] === "Food" &&
+              <Ionicons
+              size={13}
+              name="pizza-outline"
+              color={theme.title}
+              />
+              }
+          { categories[1] === "Entertainment" &&
+              <Ionicons
+              size={13}
+              name="film-outline"
+              color={theme.title}
+              />
+              }
+          { categories[1] === "Fitness" &&
+              <Ionicons
+              size={13}
+              name="fitness-outline"
+              color={theme.title}
+              />
+              }
+          { categories[1] === "Social" &&
+              <Ionicons
+              size={13}
+              name="people-outline"
+              color={theme.title}
+              />
+              }
+          { categories[1] === "Marketplace" &&
+              <Ionicons
+              size={13}
+              name="pricetag-outline"
+              color={theme.title}
+              />
+              }
+          { categories[1] === "Gaming" &&
+              <Ionicons
+              size={13}
+              name="game-controller-outline"
+              color={theme.title}
+              />
+              }
+          { categories[1] === "Tech" &&
+              <Ionicons
+              size={13}
+              name="laptop-outline"
+              color={theme.title}
+              />
+              }
+          { categories[1] === "Music" &&
+              <Ionicons
+              size={13}
+              name="musical-notes-outline"
+              color={theme.title}
+              />
+              }
+            </View>
+            <ThemedText style={styles.chipName}>
+              {categories[1]}
+            </ThemedText>
+        </View>
+              }
       </View>
+      {/*Chips ends here*/}
       
       <View style={styles.postContent}>
         <Image source={pic5} style={styles.postImage} />
@@ -157,17 +298,16 @@ export default FeedCard;
 
 const styles = StyleSheet.create({
   card: {
-    width: "100%",
     paddingVertical: 10,
-    paddingHorizontal: 5,
     borderRadius: 6,
     flexDirection: 'column',
     justifyContent: 'center',
     gap: 3,
     boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.10), -0px -5px 20px rgba(0, 0, 0, 0.10)',
-    marginBottom: 10,
+    marginBottom: 0,
   },
   infoContainer: {
+    paddingHorizontal: 10,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: "space-between",
@@ -176,7 +316,6 @@ const styles = StyleSheet.create({
   infoContainerLeft: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'cnter',
     gap: 5
   },
   userImage: {
@@ -201,13 +340,15 @@ const styles = StyleSheet.create({
   },
   resName: {
     fontSize: 13,
-    fontWeight: '500',
+    fontWeight: '600',
     color: "#717b89",
   },
   cardChips: {
     flexDirection: 'row',
-    alignItems: "center",
-    gap: 20
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    gap: 15,
+    marginHorizontal: 10,
   },
   chip: {
     backgroundColor: '#d6d6d6',
@@ -216,11 +357,10 @@ const styles = StyleSheet.create({
     gap: 4,
     paddingVertical: 1,
     paddingHorizontal: 10,
-    borderRadius: 10,
-    //marginRight: 10,
+    borderRadius: 50
   },
-  infoContainerRight: {
-    
+  chipIcon: {
+    marginBottom: -1,
   },
   postContent: {
     flexDirection: 'column',
@@ -229,19 +369,19 @@ const styles = StyleSheet.create({
   postImage: {
     width: "100%",
     height: 200,
-    borderRadius: 8,
+    borderRadius: 0,
     marginTop: 6
   },
   postTitle: {
     fontSize: 16,
     fontWeight: "bold",
-    //marginLeft: 5
+    marginHorizontal: 10
   },
   postDescription: {
     width: "90%",
     fontSize: 16,
     paddingBottom: 3,
-    //marginLeft: 5,
+    marginHorizontal: 10
   },
   
   //Feed Buttons
@@ -252,24 +392,27 @@ const styles = StyleSheet.create({
     gap: 20,
     marginTop: 3,
     paddingVertical: 4,
+    paddingHorizontal: 10,
     borderTopWidth: 1,
     borderColor: "#d4d4d4",
-    paddingLeft: 10
   },
   likeBtn: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4
+    gap: 4,
+    paddingHorizontal: 5,
   },
   reshareBtn: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4
+    gap: 4,
+    paddingHorizontal: 5,
   },
   replyBtn: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4
+    gap: 4,
+    paddingHorizontal: 5,
   },
   btnText: {
     flexDirection: 'column',

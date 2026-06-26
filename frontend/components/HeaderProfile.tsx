@@ -46,7 +46,7 @@ const HeaderProfile = () => {
         style={styles.icon}
         size={28}
         name="list"
-        color={theme.iconColor}
+        color={theme.iconColorFocused}
         />
         </Pressable>
       </View>

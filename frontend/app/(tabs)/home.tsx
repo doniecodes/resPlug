@@ -56,14 +56,14 @@ const Home = () => {
   
   //feedsElements
   const feedsElements = feeds !== null && feeds;
-  console.log(feedsElements);
   
   //Screen Header
   const ScreenHeader = ()=> {
     return (
       <View
       style={{backgroundColor: theme.background,
-      paddingTop: insets.top}}>
+      paddingTop: insets.top,
+      }}>
         
       <Header />
       
@@ -110,8 +110,6 @@ const styles = StyleSheet.create({
   containerGreeting: {
     paddingVertical: 8,
     marginBottom: 5,
-    //borderBottomWidth: 1,
-    //borderBottomColor: "#e5e5e5"
   },
   title: {
     fontWeight: 'bold',
@@ -124,14 +122,9 @@ const styles = StyleSheet.create({
   },
   // feeds
   feedsContainer: {
-    width: "100%",
     paddingBottom: 30,
     paddingTop: 3,
-    paddingHorizontal: 3,
-    flexDirection: 'column',
     gap: 5,
-    marginHorizontal: "auto",
-    marginVertical: 0,
     backgroundColor: '#f8f8f8',
   }
 });

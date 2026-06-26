@@ -29,7 +29,8 @@ const Login = () => {
   //hooks
   const { loginUser, error, loading } = UserForms();
   
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     await loginUser(email, password);
     }
     

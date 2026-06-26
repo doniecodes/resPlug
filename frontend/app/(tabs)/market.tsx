@@ -1,3 +1,4 @@
+import SearchBox from '../../components/SearchBox';
 import FeaturedCard from '../../components/FeaturedCard';
 import MarketHook from '../../hooks/MarketHook';
 import ItemCard from '../../components/ItemCard';
@@ -60,7 +61,15 @@ const Market = () => {
   const ScreenHeader = () => (
     <>
     <ThemedView style={styles.container}>
+      
+      {/*Header*/}
       <HeaderMarketplace />
+      
+      {/*SearchBox*/}
+      <SearchBox
+      width="90%"
+      placeholder="Search for items, services..." />
+      
       {/*Chips*/}
       <MarketChips
       categories={categories}
@@ -189,13 +198,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   seeAllText: {
-    color: "purple",
-    fontWeight: 600,
+    color: "#6D28B9",
+    //color: "#743089",
+    fontWeight: 800,
     borderBottomWidth: 1,
-    borderColor: 'purple',
+    borderColor: "#6D28B9",
+    //borderColor: "#743089",
   },
   seeAllBtn: {
-    color: "purple"
+    color: "#6D28B9"
   },
   
   //Item cards
@@ -211,7 +222,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 30,
     right: 20,
-    backgroundColor: 'purple',
+    backgroundColor: "#6D28B9",
     paddingVertical: 8,
     paddingHorizontal: 8,
     borderRadius: 100,

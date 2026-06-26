@@ -2,9 +2,11 @@ import ImagePickerComponent from '../../components/ImagePickerComponent';
 import ThemedText from '../../components/ThemedText';
 import ThemedView from '../../components/ThemedView';
 import { StyleSheet, Text, View, Image,
-TextInput, Pressable, ScrollView,
-TouchableWithoutFeedback,
-Keyboard, useColorScheme,Platform, KeyboardAvoidingView } from 'react-native';
+TextInput, Pressable, ScrollView, Alert,
+TouchableWithoutFeedback, Button,
+Keyboard, useColorScheme, Platform, KeyboardAvoidingView } from 'react-native';
+
+import { useWindowDimensions } from "react-native";
 
 import { useState, useEffect } from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -18,6 +20,10 @@ import { Ionicons } from "@expo/vector-icons";
 
 import laptop from "../../assets/images/laptop.jpg"
 
+import * as ImagePicker from "expo-image-picker";
+
+import addImageIcon from "../../assets/images/add-image3.png"
+
 
 const SellItemScreen = () => {
   
@@ -25,6 +31,7 @@ const SellItemScreen = () => {
   const [ title, setTitle ] = useState("");
   const [ price, setPrice ] = useState("");
   const [ description, setDescription ] = useState("");
+  const [ isScrolled, setIsscrolled ] = useState(false);
   
   const conditions = [
     {key: "New", value: "New"},
@@ -52,12 +59,48 @@ const SellItemScreen = () => {
   const colorScheme = useColorScheme()
   const theme = Colors.light;
   
+  const [ images, setImages ] = useState<string[]>([]);
+  
+  const pickImage = async ()=> {
+    const permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    
+    if(!permissionResult.granted) {
+      Alert.alert("Permission required", "permission to access the media library is denied");
+      return;
+    }
+    
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ["images"],
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1
+    });
+    
+    if(!result.canceled){
+      setImages((prev)=> [...prev, result.assets[0].uri]);
+    }
+  }
+  
+  //on scroll function
+  const handleScroll = (event)=> {
+    const currentScrollY = Math.trunc(event.nativeEvent.contentOffset.y);
+    if(currentScrollY > 30) {
+      setIsscrolled(true);
+    } else {
+      setIsscrolled(false);
+    }
+  }
+  
+  const handleSubmit = async ()=> {
+    
+  }
+  
   return (
     <>
       <ThemedView
       style={[{
         paddingTop: insets.top
-      }, styles.header]}>
+      }, styles.header, isScrolled && styles.headerBorder]}>
         <View style={styles.backBtn}>
           <Link href="..">
           <Ionicons
@@ -72,25 +115,93 @@ const SellItemScreen = () => {
           Sell Item
         </ThemedText>
         <Pressable>
-          <ThemedText style={[{color: "purple"}, styles.cancelBtn]}>
+          <ThemedText style={styles.cancelBtn}>
             Cancel
           </ThemedText>
         </Pressable>
       </ThemedView>
       
       <ScrollView
-        style={{}}
+        onScroll={handleScroll}
       showsVerticalScrollIndicator={false}>
+        
       <ThemedView style={styles.container}>
+        
         <View
         style={styles.imagePickerContainer}>
           <ScrollView
           contentContainerStyle={styles.images}
         horizontal={true}
         showsHorizontalScrollIndicator={false}>
-            <ImagePickerComponent />
-            <ImagePickerComponent />
-            <ImagePickerComponent />
+            
+        <View style={styles.containerPicker}>
+        { images.length === 0 ?
+        <Pressable
+        style={({pressed})=> [
+        styles.btn, pressed && styles.pressed
+        ]}
+        onPress={pickImage}>
+          <Image
+          style={styles.icon}
+          source={addImageIcon}
+          />
+        <Text style={styles.text}>
+        Add image
+        </Text>
+        </Pressable>
+        :
+        <Image
+        source={{uri: images[0]}}
+        style={styles.image}
+        />}
+      </View>
+
+        <View style={styles.containerPicker}>
+        { images.length === 0 || images.length === 1 &&
+        <Pressable
+        style={({pressed})=> [
+        styles.btn, pressed && styles.pressed
+        ]}
+        onPress={pickImage}>
+          <Image
+          style={styles.icon}
+          source={addImageIcon}
+          />
+        <Text style={styles.text}>
+        Add image
+        </Text>
+        </Pressable>
+        }
+        {images.length > 1 &&
+        <Image
+        source={{uri: images[1]}}
+        style={styles.image}
+        />}
+      </View>
+
+        <View style={styles.containerPicker}>
+        { images.length === 0 || images.length === 2 &&
+        <Pressable
+        style={({pressed})=> [
+        styles.btn, pressed && styles.pressed
+        ]}
+        onPress={pickImage}>
+          <Image
+          style={styles.icon}
+          source={addImageIcon}
+          />
+        <Text style={styles.text}>
+        Add image
+        </Text>
+        </Pressable>
+        }
+        {images.length > 2 &&
+        <Image
+        source={{uri: images[2]}}
+        style={styles.image}
+        />}
+      </View>
+
           </ScrollView>
           <ThemedText style={styles.imagesText}>
             Select at least 3 images
@@ -172,6 +283,7 @@ const SellItemScreen = () => {
       
           <ThemedView style={[{paddingBottom: insets.bottom}, styles.submitBtnWrapper]}>
             <Pressable
+            onPress={handleSubmit}
             style={({pressed})=> ([
             styles.submitBtn, pressed && styles.submitBtnPressed
             ])}>
@@ -189,7 +301,7 @@ export default SellItemScreen;
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 10,
-    height: "100%"
+    backgroundColor: "#f8f8f8",
   },
   header: {
     paddingHorizontal: 10,
@@ -198,6 +310,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+  },
+  headerBorder: {
+    borderBottomWidth: 1.5,
+    borderColor: "#D5D5D5",
   },
   headerText: {
     flex: 1,
@@ -216,14 +332,43 @@ const styles = StyleSheet.create({
     gap: 10,
     paddingVertical: 10,
   },
+  //Image picker
+  containerPicker: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    width: 150,
+    height: 120,
+    borderWidth: 1.6,
+    borderRadius: 10,
+    borderColor: '#d5d5d5',
+  },
+  icon: {
+    width: 50,
+    height: 50
+  },
+  text: {
+    fontSize: 14,
+    textAlign: 'center',
+  },
+  btn: {
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%"
+  },
+  pressed: {
+    opacity: 0.5
+  },
+  image: {
+    width: 150,
+    height: 120,
+    borderRadius: 10
+  },
+  //Image picker ends here
   imagesText: {
     textAlign: 'center',
   },
-  image: {
-    //width: 150,
-    //height: 120,
-    borderRadius: 10
-  },
+  //Item Info starts here
   itemInfoContainer: {
     flex: 1,
     flexDirection: 'column',
@@ -251,17 +396,16 @@ const styles = StyleSheet.create({
   },
   submitBtnWrapper: {
     width: "100%",
-    marginTop: 20,
     backgroundColor: '#f8f8f8',
-    paddingTop: 10,
+    paddingTop: 20,
     paddingHorizontal: 10,
     position: 'fixed',
     bottom: 0,
-    borderTopWidth: 1.6,
+    borderTopWidth: 1.5,
     borderColor: '#d5d5d5',
   },
   submitBtn: {
-    backgroundColor: 'purple',
+    backgroundColor: "#6D28B9",
     height: 50,
     alignItems: 'center',
     justifyContent: 'center',
@@ -271,7 +415,7 @@ const styles = StyleSheet.create({
     borderRadius: 100,
   },
   submitBtnPressed: {
-    opacity: 0.8
+    opacity: 0.5
   },
   submitBtnText: {
     color: "#f8f8f8",
@@ -279,9 +423,10 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   cancelBtn: {
-    fontWeight: 500,
+    fontWeight: 700,
     borderBottomWidth: 1,
-    borderColor: 'purple',
+    borderColor: "#6D28B9",
+    color: "#6D28B9",
   }
   
 });

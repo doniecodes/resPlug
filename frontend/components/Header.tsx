@@ -47,7 +47,10 @@ const Header = () => {
         </Pressable>
       <ThemedText
       title={true} style={styles.title}>
-        resPlug
+        res
+        <ThemedText title={true} style={styles.subTitle}>
+          Plug
+        </ThemedText>
       </ThemedText>
       </View>
       
@@ -110,8 +113,8 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     paddingLeft: 15,
     paddingRight: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: "#e5e5e5"
+    borderBottomWidth: 1.3,
+    borderBottomColor: "#d7d7d7"
   },
   logoContainer: {
     flexDirection: 'row',
@@ -122,6 +125,12 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: 'bold',
     fontSize: 25,
+  },
+  subTitle: {
+    fontWeight: 'bold',
+    fontSize: 25,
+    color: "#6D28B9",
+    //color: "#08519c"
   },
   icon: {
   //backgroundColor: '#0F1115',

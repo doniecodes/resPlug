@@ -30,7 +30,8 @@ const signup = () => {
   //hooks
   const { signupUser, error, loading } = UserForms();
   
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     await signupUser(email, password, fullName);
     }
     

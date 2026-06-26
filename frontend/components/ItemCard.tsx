@@ -1,9 +1,10 @@
 import ThemedText from './ThemedText';
 import ThemedView from './ThemedView';
 import { StyleSheet, Text,
- View, Image, Pressable } from 'react-native';
+ View, Image, Pressable, TouchableOpacity } from 'react-native';
 
 import laptop from "../assets/images/laptop.jpg"
+import { Link } from "expo-router"
 
 import { useState } from "react";
 
@@ -16,7 +17,12 @@ const ItemCard = ({id, title, price, images, seller, resId, category, descriptio
     
     
   return (
-    <View style={styles.card}>
+    <Link
+    href={`/items/${id}`}
+    asChild
+    >
+    <TouchableOpacity
+    style={({pressed})=> [styles.card, pressed && styles.pressed]}>
       
       <View style={styles.imageWrapper}>
       <Image source={laptop} style={styles.image} />
@@ -26,7 +32,7 @@ const ItemCard = ({id, title, price, images, seller, resId, category, descriptio
         <Ionicons
         size={22}
         name={favoured ? "heart" : "heart-outline"}
-        color={favoured ? "purple" : "purple"}
+        color={favoured ? "#6D28B9" : "#6D28B9"}
         />
       </Pressable>
       </View>
@@ -59,7 +65,8 @@ const ItemCard = ({id, title, price, images, seller, resId, category, descriptio
         </View>
       </View>
       
-    </View>
+    </TouchableOpacity>
+    </Link>
   );
 };
 
@@ -67,14 +74,15 @@ export default ItemCard;
 
 const styles = StyleSheet.create({
   card: {
-    maxWidth: 200,
-    
     flex: 1,
+    maxWidth: 200,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
     boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.10)',
     marginBottom: 20,
-    //position: 'relative',
+  },
+  pressed: {
+    opacity: 0.5
   },
   imageWrapper: {
     position: 'relative',
@@ -105,7 +113,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontWeight: 500,
-    fontSize: 16
+    fontSize: 16,
   },
   price: {
     fontWeight: 500,
@@ -115,7 +123,7 @@ const styles = StyleSheet.create({
   username: {
     fontSize: 13,
     color: "#717b89",
-    fontWeight: '600',
+    fontWeight: '700',
   },
   locationText: {
   },

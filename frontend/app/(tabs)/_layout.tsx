@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 
-import { useColorScheme } from "react-native"
+import { useColorScheme, Image, View, StyleSheet } from "react-native"
 import { Colors } from "../../constants/Colors"
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons"
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
+import userIcon from "../../assets/images/doniecode.png";
 
 
 export default function TabLayout () {
@@ -39,7 +40,7 @@ export default function TabLayout () {
         <Ionicons
         size = {25}
         name = {focused ? "home" : "home-outline"}
-        color = {focused ? theme.iconColorFocused : theme.iconColor}
+        color = {focused ? theme.iconColorFocused2 : theme.iconColor}
         /> )}}/>
         
       <Tabs.Screen
@@ -49,7 +50,7 @@ export default function TabLayout () {
         <Ionicons
         size = {25}
         name = {focused ? "people" : "people-outline"}
-        color = {focused ? theme.iconColorFocused : theme.iconColor}
+        color = {focused ? theme.iconColorFocused2 : theme.iconColor}
         /> )}}/>
         
       <Tabs.Screen
@@ -59,7 +60,7 @@ export default function TabLayout () {
         <Ionicons
         size = {25}
         name = {focused ? "chatbubbles" : "chatbubbles-outline"}
-        color = {focused ? theme.iconColorFocused : theme.iconColor}
+        color = {focused ? theme.iconColorFocused2 : theme.iconColor}
         /> )}}/>
         
       <Tabs.Screen
@@ -69,20 +70,31 @@ export default function TabLayout () {
         <Ionicons
         size = {25}
         name = {focused ? "storefront" : "storefront-outline"}
-        color = {focused ? theme.iconColorFocused : theme.iconColor}
+        color = {focused ? theme.iconColorFocused2 : theme.iconColor}
         /> )}}/>
       
       <Tabs.Screen
       name="profile"
       options={{title: "Profile",
       tabBarIcon : ({focused})=> (
-        <Ionicons
-        size = {25}
-        name = {focused ? "person" : "person-outline"}
-        color = {focused ? theme.iconColorFocused : theme.iconColor}
-        /> )}}/>
+      <View>
+        <Image
+        style={styles.icon}
+        source={userIcon} />
+      </View>
+         )}}/>
         
     </Tabs>
     </>
   );
 };
+
+const styles = StyleSheet.create({
+  icon: {
+    width: 30,
+    height: 30,
+    borderRadius: 100,
+    borderWidth: 1.5,
+    borderColor: "#6D28B9",
+  }
+})
