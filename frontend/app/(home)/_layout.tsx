@@ -9,7 +9,7 @@ import { Colors } from '../../constants/Colors';
 
 import { useSafeAreaInsets, SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 
-const MarketplaceLayout = () => {
+const HomeLayout = () => {
   
    //colorScheme
   const colorScheme = useColorScheme();
@@ -28,15 +28,8 @@ const MarketplaceLayout = () => {
       }}>
         
         <Stack.Screen
-        name = "sell-item"
-        options = {{title: "Sell Item",
-          headerShown: false
-        }}
-        />
-        
-        <Stack.Screen
-        name = "items/[id]"
-        options = {{title: "Item Details",
+        name = "feeds/[id]"
+        options = {{title: "Feed",
           headerShown: true
         }}
         />
@@ -46,4 +39,4 @@ const MarketplaceLayout = () => {
   );
 };
 
-export default MarketplaceLayout;
+export default HomeLayout;

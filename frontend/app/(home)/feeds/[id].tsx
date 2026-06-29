@@ -1,31 +1,44 @@
-import ThemedText from './ThemedText';
-import ThemedView from './ThemedView';
+import FeedComments from '../../../components/FeedComments';
+import ThemedText from '../../../components/ThemedText';
+import ThemedView from '../../../components/ThemedView';
+import FeedsHook from "../../../hooks/FeedsHook";
 
-import { useColorScheme } from 'react-native'
-import { Colors } from '../constants/Colors'
+import { StyleSheet, useColorScheme, ScrollView, Pressable, Alert, Image, View, Text, TextInput, Platform, KeyboardAvoidingView } from 'react-native'
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { Colors } from '../../../constants/Colors'
 
-import { StyleSheet, Text, View, SafeView, Image, Pressable } from "react-native";
-
-import { Link } from "expo-router";
-
-import { useState } from "react";
-
+import { Link, useLocalSearchParams } from "expo-router";
+import { useState, useEffect } from "react";
 import { Ionicons } from "@expo/vector-icons";
 
-import pic5 from "../assets/images/pic5.jpg";
-import image1 from "../assets/images/doniecode.png";
 
-const FeedCard = ({
-  image, username, residence,
-  title, desc, categories, stats, id
-  }) => {
+import pic5 from "../../../assets/images/pic5.jpg";
+import doniecode from "../../../assets/images/doniecode.png";
+
+const Feed = () => {
+  
+  //fetch feed
+  useEffect(()=> {
+    const getData = async ()=> {
+      try {
+        const data = await getFeeds(id);
+        setFeed(data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getData();
+  }, [])
   
   //states
+  const { id } = useLocalSearchParams()
   const [ user, setUser ] = useState({
-    username: "@doniecode",
-    res: "Monroe Gardens Res"
+    username: "@doniecode"
   });
   const [ liked, setLiked ] = useState(false);
+  
+  const { getFeeds, error, loading } = FeedsHook();
+  const [ feed, setFeed ] = useState(null);
   
    //colorScheme
   const colorScheme = useColorScheme();
@@ -35,29 +48,34 @@ const FeedCard = ({
   //current time
   const currentTime = ". 2h ago";
   
-  const subDesc = desc.substring(0, 50);
+  const subDesc = feed && feed.description.substring(0, 50);
+  const desc = feed && feed.description;
+  const categories = feed && feed.categories;
   
   //description read more function
-  const handleMore = ()=> {
-    
-  }
+  const insets = useSafeAreaInsets();
   
   return (
-    <Link href={{pathname: `/feeds/${id}`, }} isChild >
+    <>
+    { feed &&
+    <ScrollView
+    showsVerticalScrollIndicator={false}
+    contentContainerStyle={[{backgroundColor: theme.background, paddingBottom: insets.bottom}, styles.container]}
+    >
     <ThemedView style={styles.card}>
       <View style={styles.infoContainer}>
         <View style={styles.infoContainerLeft}>
-          <Image source={image1} style={styles.userImage} />
+          <Image source={doniecode} style={styles.userImage} />
           <View style={styles.userInfo}>
             <View style={styles.nameWrapper}>
           <ThemedText title={true} style={styles.name}>
-            @{username}
+            @{feed.user.username}
           </ThemedText>
             <ThemedText style={[{color: "#666"}, styles.time]}>
              . 2d
             </ThemedText>
             </View>
-              
+            
           <View style={styles.res}>
             <Ionicons
             size={13}
@@ -65,7 +83,7 @@ const FeedCard = ({
             color={theme.resIconColor}
             />
             <Text style={styles.resName}>
-              {residence}
+              {feed.user.residence}
             </Text>
           </View>
           </View>
@@ -231,14 +249,18 @@ const FeedCard = ({
       </View>
       {/*Chips ends here*/}
       
-      <View style={styles.postContent}>
-        <Image source={pic5} style={styles.postImage} />
+      {/*Title here*/}
+      <View style={styles.titleWrapper}>
         <ThemedText title={true}
         style={styles.postTitle}>
-          {title}
+          {feed.title}
         </ThemedText>
+      </View>
+      
+      <View style={styles.postContent}>
+        <Image source={pic5} style={styles.postImage} />
         <ThemedText style={styles.postDescription}>
-         { desc && desc.length > 90 ?
+         { desc && desc.length > 200 ?
          <ThemedText>
            {subDesc}
             <ThemedText
@@ -264,7 +286,7 @@ const FeedCard = ({
             style={styles.textBold}>
               Like
             </ThemedText>
-            <ThemedText style={styles.btnCount}>{stats.likes}</ThemedText>
+            <ThemedText style={styles.btnCount}>{feed.stats.likes}</ThemedText>
           </View>
         </Pressable>
         <Pressable style={styles.replyBtn}>
@@ -278,7 +300,7 @@ const FeedCard = ({
             style={styles.textBold}>
               Reply
             </ThemedText>
-            <ThemedText style={styles.btnCount}>{stats.replies}</ThemedText>
+            <ThemedText style={styles.btnCount}>{feed.stats.replies}</ThemedText>
           </View>
         </Pressable>
         <Pressable style={styles.reshareBtn}>
@@ -292,18 +314,68 @@ const FeedCard = ({
             style={styles.textBold}>
               RePlug
             </ThemedText>
-            <ThemedText style={styles.btnCount}>{stats.replugs}</ThemedText>
+            <ThemedText style={styles.btnCount}>{feed.stats.replugs}</ThemedText>
           </View>
         </Pressable>
       </View>
-      
     </ThemedView>
-    </Link>
+    
+    {/*Comments start here*/}
+    <FeedComments feed={feed} />
+    
+    </ScrollView>
+    }
+    
+    { feed &&
+          {/*comment input box*/}
+    <KeyboardAvoidingView
+    behavior={Platform.OS === "ios" ? "padding" : "height"}
+    style={{ flex: 1 }}>
+      <ThemedView style={[{backgroundColor: theme.background}, styles.addCommentSection]}>
+      <View style={[{backgroundColor: theme.inputBackground}, styles.addCommentWrapper]}>
+        <View style={styles.inputWrapper}>
+          <Image style={styles.addCommentAvatar}
+          source={doniecode}
+          />
+          <TextInput
+          style={styles.addCommentInput}
+          placeholder="write a comment..."
+          value={inputValue}
+          onChangeText={setInputValue}
+          />
+        </View>
+        <View style={styles.iconsWrapper}>
+          <View style={styles.icon}>
+          <Ionicons
+          size={30}
+          name="image-outline"
+          color={theme.text}
+          />
+          </View>
+          <View style={styles.icon}>
+          <Ionicons
+          size={30}
+          name="happy-outline"
+          color={theme.text}
+          />
+          </View>
+        </View>
+        </View>
+      </ThemedView>
+      </KeyboardAvoidingView>
+    }
+      
+    </>
   );
 };
-export default FeedCard;
+export default Feed;
 
 const styles = StyleSheet.create({
+  container: {
+    //flex: 1,
+    paddingHorizontal: 0,
+    position: "relative",
+  },
   card: {
     paddingVertical: 10,
     borderRadius: 6,
@@ -311,7 +383,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 3,
     boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.10), -0px -5px 20px rgba(0, 0, 0, 0.10)',
-    marginBottom: 0,
   },
   infoContainer: {
     paddingHorizontal: 10,
@@ -407,9 +478,11 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     gap: 20,
     marginTop: 3,
-    paddingVertical: 4,
+    paddingTop: 4,
+    paddingBottom: 10,
     paddingHorizontal: 10,
     borderTopWidth: 1,
+    borderBottomWidth: 1,
     borderColor: "#d4d4d4",
   },
   likeBtn: {
@@ -449,5 +522,44 @@ const styles = StyleSheet.create({
     backgroundColor: '#e5e5e5',
     paddingHorizontal: 3,
     borderRadius: 8,
+  },
+  
+    //Add Comment Section
+  addCommentSection: {
+    width: "100%",
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderTopWidth: 1.5,
+    borderColor: '#d5d5d5',
+  },
+  addCommentWrapper: {
+    width: "100%",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 10,
+    borderRadius: 50,
+  },
+  inputWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+  },
+  addCommentAvatar: {
+    width: 30,
+    height: 30,
+    borderWidth: 1,
+    borderRadius: 50,
+    borderColor: Colors.primary,
+  },
+  iconsWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 20,
   }
+  
 });

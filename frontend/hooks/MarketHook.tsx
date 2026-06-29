@@ -21,6 +21,7 @@ const MarketHook = () => {
     
     if(!res.ok){
       setError("Could not fetch resource");
+      setLoading(false);
     }
     if(res.ok){
     dispatch({type: "SET_ITEMS", payload: data.items});
