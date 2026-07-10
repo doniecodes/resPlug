@@ -1,0 +1,1802 @@
+{
+  "chat_001": {
+    "chatId": "chat_001",
+    "category": "General",
+    "messages": [
+      {
+        "id": "msg_1_1",
+        "sender": "them",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-30T13:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_2",
+        "sender": "me",
+        "type": "text",
+        "text": "Meet at the library?",
+        "timestamp": "2026-06-30T13:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_3",
+        "sender": "them",
+        "type": "text",
+        "text": "Thanks!",
+        "timestamp": "2026-06-30T13:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_4",
+        "sender": "me",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-30T13:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_5",
+        "sender": "them",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-30T13:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_6",
+        "sender": "me",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-30T13:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_7",
+        "sender": "them",
+        "type": "text",
+        "text": "Hey!",
+        "timestamp": "2026-06-30T13:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_8",
+        "sender": "me",
+        "type": "text",
+        "text": "Thanks!",
+        "timestamp": "2026-06-30T13:42:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_9",
+        "sender": "them",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-30T13:48:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_10",
+        "sender": "me",
+        "type": "text",
+        "text": "Meet at the library?",
+        "timestamp": "2026-06-30T13:54:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_11",
+        "sender": "them",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-30T14:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_12",
+        "sender": "me",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-30T14:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_13",
+        "sender": "them",
+        "type": "text",
+        "text": "Meet at the library?",
+        "timestamp": "2026-06-30T14:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_14",
+        "sender": "me",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-30T14:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_15",
+        "sender": "them",
+        "type": "text",
+        "text": "How's the assignment?",
+        "timestamp": "2026-06-30T14:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_16",
+        "sender": "me",
+        "type": "text",
+        "text": "Hey!",
+        "timestamp": "2026-06-30T14:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_17",
+        "sender": "them",
+        "type": "text",
+        "text": "Meet at the library?",
+        "timestamp": "2026-06-30T14:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_1_18",
+        "sender": "me",
+        "type": "text",
+        "text": "How's the assignment?",
+        "timestamp": "2026-06-30T14:42:00Z",
+        "read": false
+      }
+    ]
+  },
+  "chat_002": {
+    "chatId": "chat_002",
+    "category": "Marketplace",
+    "messages": [
+      {
+        "id": "msg_2_1",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-29T13:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_2",
+        "sender": "me",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-29T13:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_3",
+        "sender": "them",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-29T13:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_4",
+        "sender": "me",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-29T13:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_5",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-29T13:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_6",
+        "sender": "me",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-29T13:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_7",
+        "sender": "them",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-29T13:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_8",
+        "sender": "me",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-29T13:42:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_9",
+        "sender": "them",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-29T13:48:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_10",
+        "sender": "me",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-29T13:54:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_11",
+        "sender": "them",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-29T14:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_12",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-29T14:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_13",
+        "sender": "them",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-29T14:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_14",
+        "sender": "me",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-29T14:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_15",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-29T14:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_16",
+        "sender": "me",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-29T14:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_17",
+        "sender": "them",
+        "type": "text",
+        "text": "Payment sent.",
+        "timestamp": "2026-06-29T14:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_2_18",
+        "sender": "me",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-29T14:42:00Z",
+        "read": false
+      }
+    ]
+  },
+  "chat_003": {
+    "chatId": "chat_003",
+    "category": "General",
+    "messages": [
+      {
+        "id": "msg_3_1",
+        "sender": "them",
+        "type": "text",
+        "text": "Thanks!",
+        "timestamp": "2026-06-28T13:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_2",
+        "sender": "me",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-28T13:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_3",
+        "sender": "them",
+        "type": "text",
+        "text": "How's the assignment?",
+        "timestamp": "2026-06-28T13:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_4",
+        "sender": "me",
+        "type": "text",
+        "text": "Yo \ud83d\ude02",
+        "timestamp": "2026-06-28T13:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_5",
+        "sender": "them",
+        "type": "text",
+        "text": "Thanks!",
+        "timestamp": "2026-06-28T13:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_6",
+        "sender": "me",
+        "type": "text",
+        "text": "Hey!",
+        "timestamp": "2026-06-28T13:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_7",
+        "sender": "them",
+        "type": "text",
+        "text": "Yo \ud83d\ude02",
+        "timestamp": "2026-06-28T13:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_8",
+        "sender": "me",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-28T13:42:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_9",
+        "sender": "them",
+        "type": "text",
+        "text": "Yo \ud83d\ude02",
+        "timestamp": "2026-06-28T13:48:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_10",
+        "sender": "me",
+        "type": "text",
+        "text": "Hey!",
+        "timestamp": "2026-06-28T13:54:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_11",
+        "sender": "them",
+        "type": "text",
+        "text": "How's the assignment?",
+        "timestamp": "2026-06-28T14:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_12",
+        "sender": "me",
+        "type": "text",
+        "text": "Thanks!",
+        "timestamp": "2026-06-28T14:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_13",
+        "sender": "them",
+        "type": "text",
+        "text": "How's the assignment?",
+        "timestamp": "2026-06-28T14:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_14",
+        "sender": "me",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-28T14:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_15",
+        "sender": "them",
+        "type": "text",
+        "text": "How's the assignment?",
+        "timestamp": "2026-06-28T14:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_16",
+        "sender": "me",
+        "type": "text",
+        "text": "How's the assignment?",
+        "timestamp": "2026-06-28T14:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_17",
+        "sender": "them",
+        "type": "text",
+        "text": "Thanks!",
+        "timestamp": "2026-06-28T14:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_3_18",
+        "sender": "me",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-28T14:42:00Z",
+        "read": false
+      }
+    ]
+  },
+  "chat_004": {
+    "chatId": "chat_004",
+    "category": "Marketplace",
+    "messages": [
+      {
+        "id": "msg_4_1",
+        "sender": "them",
+        "type": "text",
+        "text": "Payment sent.",
+        "timestamp": "2026-06-27T13:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_2",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-27T13:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_3",
+        "sender": "them",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-27T13:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_4",
+        "sender": "me",
+        "type": "text",
+        "text": "Payment sent.",
+        "timestamp": "2026-06-27T13:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_5",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-27T13:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_6",
+        "sender": "me",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-27T13:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_7",
+        "sender": "them",
+        "type": "text",
+        "text": "Payment sent.",
+        "timestamp": "2026-06-27T13:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_8",
+        "sender": "me",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-27T13:42:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_9",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-27T13:48:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_10",
+        "sender": "me",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-27T13:54:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_11",
+        "sender": "them",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-27T14:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_12",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-27T14:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_13",
+        "sender": "them",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-27T14:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_14",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-27T14:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_15",
+        "sender": "them",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-27T14:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_16",
+        "sender": "me",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-27T14:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_17",
+        "sender": "them",
+        "type": "text",
+        "text": "Payment sent.",
+        "timestamp": "2026-06-27T14:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_4_18",
+        "sender": "me",
+        "type": "text",
+        "text": "Payment sent.",
+        "timestamp": "2026-06-27T14:42:00Z",
+        "read": false
+      }
+    ]
+  },
+  "chat_005": {
+    "chatId": "chat_005",
+    "category": "General",
+    "messages": [
+      {
+        "id": "msg_5_1",
+        "sender": "them",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-26T13:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_2",
+        "sender": "me",
+        "type": "text",
+        "text": "Yo \ud83d\ude02",
+        "timestamp": "2026-06-26T13:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_3",
+        "sender": "them",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-26T13:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_4",
+        "sender": "me",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-26T13:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_5",
+        "sender": "them",
+        "type": "text",
+        "text": "Yo \ud83d\ude02",
+        "timestamp": "2026-06-26T13:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_6",
+        "sender": "me",
+        "type": "text",
+        "text": "Thanks!",
+        "timestamp": "2026-06-26T13:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_7",
+        "sender": "them",
+        "type": "text",
+        "text": "Thanks!",
+        "timestamp": "2026-06-26T13:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_8",
+        "sender": "me",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-26T13:42:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_9",
+        "sender": "them",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-26T13:48:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_10",
+        "sender": "me",
+        "type": "text",
+        "text": "Meet at the library?",
+        "timestamp": "2026-06-26T13:54:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_11",
+        "sender": "them",
+        "type": "text",
+        "text": "Yo \ud83d\ude02",
+        "timestamp": "2026-06-26T14:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_12",
+        "sender": "me",
+        "type": "text",
+        "text": "Hey!",
+        "timestamp": "2026-06-26T14:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_13",
+        "sender": "them",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-26T14:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_14",
+        "sender": "me",
+        "type": "text",
+        "text": "Thanks!",
+        "timestamp": "2026-06-26T14:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_15",
+        "sender": "them",
+        "type": "text",
+        "text": "Hey!",
+        "timestamp": "2026-06-26T14:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_16",
+        "sender": "me",
+        "type": "text",
+        "text": "Meet at the library?",
+        "timestamp": "2026-06-26T14:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_17",
+        "sender": "them",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-26T14:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_5_18",
+        "sender": "me",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-26T14:42:00Z",
+        "read": false
+      }
+    ]
+  },
+  "chat_006": {
+    "chatId": "chat_006",
+    "category": "Marketplace",
+    "messages": [
+      {
+        "id": "msg_6_1",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-25T13:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_2",
+        "sender": "me",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-25T13:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_3",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-25T13:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_4",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-25T13:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_5",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-25T13:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_6",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-25T13:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_7",
+        "sender": "them",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-25T13:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_8",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-25T13:42:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_9",
+        "sender": "them",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-25T13:48:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_10",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-25T13:54:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_11",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-25T14:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_12",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-25T14:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_13",
+        "sender": "them",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-25T14:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_14",
+        "sender": "me",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-25T14:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_15",
+        "sender": "them",
+        "type": "text",
+        "text": "Payment sent.",
+        "timestamp": "2026-06-25T14:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_16",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-25T14:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_17",
+        "sender": "them",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-25T14:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_6_18",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-25T14:42:00Z",
+        "read": false
+      }
+    ]
+  },
+  "chat_007": {
+    "chatId": "chat_007",
+    "category": "General",
+    "messages": [
+      {
+        "id": "msg_7_1",
+        "sender": "them",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-24T13:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_2",
+        "sender": "me",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-24T13:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_3",
+        "sender": "them",
+        "type": "text",
+        "text": "How's the assignment?",
+        "timestamp": "2026-06-24T13:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_4",
+        "sender": "me",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-24T13:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_5",
+        "sender": "them",
+        "type": "text",
+        "text": "Yo \ud83d\ude02",
+        "timestamp": "2026-06-24T13:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_6",
+        "sender": "me",
+        "type": "text",
+        "text": "How's the assignment?",
+        "timestamp": "2026-06-24T13:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_7",
+        "sender": "them",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-24T13:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_8",
+        "sender": "me",
+        "type": "text",
+        "text": "Meet at the library?",
+        "timestamp": "2026-06-24T13:42:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_9",
+        "sender": "them",
+        "type": "text",
+        "text": "Hey!",
+        "timestamp": "2026-06-24T13:48:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_10",
+        "sender": "me",
+        "type": "text",
+        "text": "Meet at the library?",
+        "timestamp": "2026-06-24T13:54:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_11",
+        "sender": "them",
+        "type": "text",
+        "text": "Hey!",
+        "timestamp": "2026-06-24T14:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_12",
+        "sender": "me",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-24T14:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_13",
+        "sender": "them",
+        "type": "text",
+        "text": "Thanks!",
+        "timestamp": "2026-06-24T14:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_14",
+        "sender": "me",
+        "type": "text",
+        "text": "Yo \ud83d\ude02",
+        "timestamp": "2026-06-24T14:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_15",
+        "sender": "them",
+        "type": "text",
+        "text": "Yo \ud83d\ude02",
+        "timestamp": "2026-06-24T14:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_16",
+        "sender": "me",
+        "type": "text",
+        "text": "Hey!",
+        "timestamp": "2026-06-24T14:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_17",
+        "sender": "them",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-24T14:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_7_18",
+        "sender": "me",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-24T14:42:00Z",
+        "read": false
+      }
+    ]
+  },
+  "chat_008": {
+    "chatId": "chat_008",
+    "category": "Marketplace",
+    "messages": [
+      {
+        "id": "msg_8_1",
+        "sender": "them",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-23T13:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_2",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-23T13:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_3",
+        "sender": "them",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-23T13:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_4",
+        "sender": "me",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-23T13:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_5",
+        "sender": "them",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-23T13:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_6",
+        "sender": "me",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-23T13:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_7",
+        "sender": "them",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-23T13:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_8",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-23T13:42:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_9",
+        "sender": "them",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-23T13:48:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_10",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-23T13:54:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_11",
+        "sender": "them",
+        "type": "text",
+        "text": "Payment sent.",
+        "timestamp": "2026-06-23T14:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_12",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-23T14:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_13",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-23T14:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_14",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-23T14:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_15",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-23T14:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_16",
+        "sender": "me",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-23T14:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_17",
+        "sender": "them",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-23T14:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_8_18",
+        "sender": "me",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-23T14:42:00Z",
+        "read": false
+      }
+    ]
+  },
+  "chat_009": {
+    "chatId": "chat_009",
+    "category": "General",
+    "messages": [
+      {
+        "id": "msg_9_1",
+        "sender": "them",
+        "type": "text",
+        "text": "How's the assignment?",
+        "timestamp": "2026-06-22T13:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_2",
+        "sender": "me",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-22T13:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_3",
+        "sender": "them",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-22T13:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_4",
+        "sender": "me",
+        "type": "text",
+        "text": "Hey!",
+        "timestamp": "2026-06-22T13:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_5",
+        "sender": "them",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-22T13:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_6",
+        "sender": "me",
+        "type": "text",
+        "text": "How's the assignment?",
+        "timestamp": "2026-06-22T13:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_7",
+        "sender": "them",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-22T13:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_8",
+        "sender": "me",
+        "type": "text",
+        "text": "How's the assignment?",
+        "timestamp": "2026-06-22T13:42:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_9",
+        "sender": "them",
+        "type": "text",
+        "text": "How's the assignment?",
+        "timestamp": "2026-06-22T13:48:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_10",
+        "sender": "me",
+        "type": "text",
+        "text": "Hey!",
+        "timestamp": "2026-06-22T13:54:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_11",
+        "sender": "them",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-22T14:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_12",
+        "sender": "me",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-22T14:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_13",
+        "sender": "them",
+        "type": "text",
+        "text": "Hey!",
+        "timestamp": "2026-06-22T14:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_14",
+        "sender": "me",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-22T14:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_15",
+        "sender": "them",
+        "type": "text",
+        "text": "Yo \ud83d\ude02",
+        "timestamp": "2026-06-22T14:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_16",
+        "sender": "me",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-22T14:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_17",
+        "sender": "them",
+        "type": "text",
+        "text": "See you tomorrow.",
+        "timestamp": "2026-06-22T14:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_9_18",
+        "sender": "me",
+        "type": "text",
+        "text": "Are you coming to class?",
+        "timestamp": "2026-06-22T14:42:00Z",
+        "read": false
+      }
+    ]
+  },
+  "chat_010": {
+    "chatId": "chat_010",
+    "category": "Marketplace",
+    "messages": [
+      {
+        "id": "msg_10_1",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-21T13:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_2",
+        "sender": "me",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-21T13:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_3",
+        "sender": "them",
+        "type": "text",
+        "text": "Payment sent.",
+        "timestamp": "2026-06-21T13:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_4",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-21T13:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_5",
+        "sender": "them",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-21T13:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_6",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-21T13:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_7",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-21T13:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_8",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-21T13:42:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_9",
+        "sender": "them",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-21T13:48:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_10",
+        "sender": "me",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-21T13:54:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_11",
+        "sender": "them",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-21T14:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_12",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-21T14:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_13",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-21T14:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_14",
+        "sender": "me",
+        "type": "text",
+        "text": "Payment sent.",
+        "timestamp": "2026-06-21T14:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_15",
+        "sender": "them",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-21T14:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_16",
+        "sender": "me",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-21T14:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_17",
+        "sender": "them",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-21T14:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_18",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-21T14:42:00Z",
+        "read": false
+      }
+    ]
+  },
+  "chat_011": {
+    "chatId": "chat_010",
+    "category": "Marketplace",
+    "messages": [
+      {
+        "id": "msg_10_1",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-21T13:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_2",
+        "sender": "me",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-21T13:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_3",
+        "sender": "them",
+        "type": "text",
+        "text": "Payment sent.",
+        "timestamp": "2026-06-21T13:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_4",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-21T13:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_5",
+        "sender": "them",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-21T13:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_6",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-21T13:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_7",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-21T13:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_8",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-21T13:42:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_9",
+        "sender": "them",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-21T13:48:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_10",
+        "sender": "me",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-21T13:54:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_11",
+        "sender": "them",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-21T14:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_12",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-21T14:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_13",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-21T14:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_14",
+        "sender": "me",
+        "type": "text",
+        "text": "Payment sent.",
+        "timestamp": "2026-06-21T14:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_15",
+        "sender": "them",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-21T14:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_16",
+        "sender": "me",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-21T14:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_17",
+        "sender": "them",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-21T14:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_18",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-21T14:42:00Z",
+        "read": false
+      }
+    ]
+  },
+  "chat_012": {
+    "chatId": "chat_010",
+    "category": "Marketplace",
+    "messages": [
+      {
+        "id": "msg_10_1",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-21T13:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_2",
+        "sender": "me",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-21T13:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_3",
+        "sender": "them",
+        "type": "text",
+        "text": "Payment sent.",
+        "timestamp": "2026-06-21T13:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_4",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-21T13:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_5",
+        "sender": "them",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-21T13:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_6",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-21T13:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_7",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-21T13:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_8",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-21T13:42:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_9",
+        "sender": "them",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-21T13:48:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_10",
+        "sender": "me",
+        "type": "text",
+        "text": "Where can we meet?",
+        "timestamp": "2026-06-21T13:54:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_11",
+        "sender": "them",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-21T14:00:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_12",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you reserve it?",
+        "timestamp": "2026-06-21T14:06:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_13",
+        "sender": "them",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-21T14:12:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_14",
+        "sender": "me",
+        "type": "text",
+        "text": "Payment sent.",
+        "timestamp": "2026-06-21T14:18:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_15",
+        "sender": "them",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-21T14:24:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_16",
+        "sender": "me",
+        "type": "text",
+        "text": "I'll collect after class.",
+        "timestamp": "2026-06-21T14:30:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_17",
+        "sender": "them",
+        "type": "text",
+        "text": "Is it still available?",
+        "timestamp": "2026-06-21T14:36:00Z",
+        "read": true
+      },
+      {
+        "id": "msg_10_18",
+        "sender": "me",
+        "type": "text",
+        "text": "Can you do R500?",
+        "timestamp": "2026-06-21T14:42:00Z",
+        "read": false
+      }
+    ]
+  }
+}

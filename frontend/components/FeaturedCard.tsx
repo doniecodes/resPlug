@@ -1,6 +1,7 @@
 import ThemedText from './ThemedText';
 import ThemedView from './ThemedView';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import { Link } from 'expo-router';
 
 import laptop from "../assets/images/laptop.jpg"
 
@@ -11,6 +12,7 @@ const FeaturedCard = ({id, title, price, images, seller,
     
     
   return (
+    <Link href={`/items/${id}`}>
     <View style={styles.card}>
       <Image source={laptop} style={styles.image} />
       <View style={styles.gradient}></View>
@@ -35,6 +37,7 @@ const FeaturedCard = ({id, title, price, images, seller,
       </View>
       
     </View>
+    </Link>
   );
 };
 

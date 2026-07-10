@@ -43,7 +43,7 @@ const FeedCard = ({
   }
   
   return (
-    <Link href={{pathname: `/feeds/${id}`, }} isChild >
+    <Link href={{pathname: `/feeds/${id}`}} isChild >
     <ThemedView style={styles.card}>
       <View style={styles.infoContainer}>
         <View style={styles.infoContainerLeft}>

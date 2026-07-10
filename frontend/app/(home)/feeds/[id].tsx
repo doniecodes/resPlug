@@ -36,6 +36,7 @@ const Feed = () => {
     username: "@doniecode"
   });
   const [ liked, setLiked ] = useState(false);
+  const [ inputValue, setInputValue ] = useState("");
   
   const { getFeeds, error, loading } = FeedsHook();
   const [ feed, setFeed ] = useState(null);
@@ -55,12 +56,24 @@ const Feed = () => {
   //description read more function
   const insets = useSafeAreaInsets();
   
+  const [ paddingValue, setPaddingValue ] = useState(0);
+  
+  //send comment function
+  const sendComment = async ()=> {
+    
+  }
+  
   return (
     <>
     { feed &&
+    <KeyboardAvoidingView
+    enabled={true}
+    behavior={Platform.OS === "ios" ? "padding" : "height" }
+    style={{ flex: 1 }}>
+      
     <ScrollView
     showsVerticalScrollIndicator={false}
-    contentContainerStyle={[{backgroundColor: theme.background, paddingBottom: insets.bottom}, styles.container]}
+    contentContainerStyle={[{backgroundColor: theme.background, paddingBottom: insets.bottom + 70}, styles.container]}
     >
     <ThemedView style={styles.card}>
       <View style={styles.infoContainer}>
@@ -281,13 +294,9 @@ const Feed = () => {
           name={liked ? "heart": "heart-outline"}
           color={liked ? "red": "red"}
           />
-          <View style={styles.btnText}>
-            <ThemedText title={true}
-            style={styles.textBold}>
-              Like
-            </ThemedText>
-            <ThemedText style={styles.btnCount}>{feed.stats.likes}</ThemedText>
-          </View>
+          <ThemedText title={true} style={styles.btnCount}>
+            {feed.stats.likes}
+          </ThemedText>
         </Pressable>
         <Pressable style={styles.replyBtn}>
           <Ionicons
@@ -295,13 +304,9 @@ const Feed = () => {
           name="chatbubble-ellipses-outline"
           color="#4a77a3"
           />
-          <View style={styles.btnText}>
-            <ThemedText title={true}
-            style={styles.textBold}>
-              Reply
+            <ThemedText title={true} style={styles.btnCount}>
+              {feed.stats.replies}
             </ThemedText>
-            <ThemedText style={styles.btnCount}>{feed.stats.replies}</ThemedText>
-          </View>
         </Pressable>
         <Pressable style={styles.reshareBtn}>
           <Ionicons
@@ -309,29 +314,20 @@ const Feed = () => {
           name="sync"
           color="#94bb8e"
           />
-          <View style={styles.btnText}>
-            <ThemedText title={true}
-            style={styles.textBold}>
-              RePlug
+            <ThemedText title={true} style={styles.btnCount}>
+              {feed.stats.replugs}
             </ThemedText>
-            <ThemedText style={styles.btnCount}>{feed.stats.replugs}</ThemedText>
-          </View>
         </Pressable>
       </View>
+      
     </ThemedView>
     
     {/*Comments start here*/}
     <FeedComments feed={feed} />
-    
     </ScrollView>
-    }
     
-    { feed &&
-          {/*comment input box*/}
-    <KeyboardAvoidingView
-    behavior={Platform.OS === "ios" ? "padding" : "height"}
-    style={{ flex: 1 }}>
-      <ThemedView style={[{backgroundColor: theme.background}, styles.addCommentSection]}>
+    {/*comment input box*/}
+      <ThemedView style={[{paddingBottom: insets.bottom + paddingValue }, styles.addCommentSection]}>
       <View style={[{backgroundColor: theme.inputBackground}, styles.addCommentWrapper]}>
         <View style={styles.inputWrapper}>
           <Image style={styles.addCommentAvatar}
@@ -342,16 +338,11 @@ const Feed = () => {
           placeholder="write a comment..."
           value={inputValue}
           onChangeText={setInputValue}
+          returnKeyType="send"
+          onSubmitEditing={sendComment}
           />
         </View>
         <View style={styles.iconsWrapper}>
-          <View style={styles.icon}>
-          <Ionicons
-          size={30}
-          name="image-outline"
-          color={theme.text}
-          />
-          </View>
           <View style={styles.icon}>
           <Ionicons
           size={30}
@@ -488,31 +479,24 @@ const styles = StyleSheet.create({
   likeBtn: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4,
     paddingHorizontal: 5,
+    gap: 1
   },
   reshareBtn: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4,
     paddingHorizontal: 5,
+    gap: 1
   },
   replyBtn: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4,
     paddingHorizontal: 5,
-  },
-  btnText: {
-    flexDirection: 'column',
-  },
-  textBold: {
-    fontWeight: "bold",
-    fontSize: 13,
-    marginBottom: "-4"
+    gap: 1
   },
   btnCount: {
-    fontSize: 10,
+    fontSize: 14,
+    fontWeight: '400',
   },
   optionsBtn: {
     paddingHorizontal: 3,
@@ -535,19 +519,23 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     borderTopWidth: 1.5,
     borderColor: '#d5d5d5',
+    //boxShadow: "5px 0px 90px 20px rgba(0, 0, 0, 0.5)"
   },
   addCommentWrapper: {
-    width: "100%",
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    gap: 10,
+    //gap: 10,
     borderRadius: 50,
   },
   inputWrapper: {
+    width: "70%",
     flexDirection: 'row',
     alignItems: 'center',
     gap: 5,
+  },
+  addCommentInput: {
+    width: "100%",
   },
   addCommentAvatar: {
     width: 30,
@@ -557,9 +545,14 @@ const styles = StyleSheet.create({
     borderColor: Colors.primary,
   },
   iconsWrapper: {
+    marginLeft: 5,
+    marginRight: 5,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 20,
+  },
+  icon: {
+    paddingHorizontal: 5
   }
   
 });

@@ -3,7 +3,7 @@ import FeaturedCard from '../../components/FeaturedCard';
 import MarketHook from '../../hooks/MarketHook';
 import ItemCard from '../../components/ItemCard';
 
-import HeaderMarketplace from '../../components/HeaderMarketplace';
+import HeaderComponent from '../../components/HeaderComponent';
 import ThemedText from '../../components/ThemedText';
 import ThemedView from '../../components/ThemedView';
 import MarketChips from '../../components/MarketChips';
@@ -63,7 +63,10 @@ const Market = () => {
     <ThemedView style={styles.container}>
       
       {/*Header*/}
-      <HeaderMarketplace />
+      <HeaderComponent
+      title={"Marketplace"}
+      icon={"notifications"}
+      />
       
       {/*SearchBox*/}
       <SearchBox
@@ -132,7 +135,7 @@ const Market = () => {
           data={itemsData}
           numColumns={2}
           columnWrapperStyle={styles.itemsGrids}
-          contentContainerStyle={[{paddingTop: insets.top}, styles.itemCards]}
+          contentContainerStyle={[{paddingBottom: insets.bottom}, styles.itemCards]}
           ListHeaderComponent={ScreenHeader}
           keyExtractor={(item)=> item.id}
           renderItem={({item})=> (
@@ -175,22 +178,24 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     paddingBottom: 20,
-    paddingLeft: 15,
+    paddingLeft: 0,
     borderBottomWidth: 2,
     borderColor: '#e2e2e2',
   },
   itemsTitle: {
     marginTop: 6,
-    paddingLeft: 10,
+    paddingLeft: 15,
     marginBottom: 10,
   },
   titleWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingRight: 15,
+    paddingLeft: 15,
   },
   cards: {
     paddingRight: 10,
+    paddingLeft: 15,
     gap: 10
   },
   title: {
@@ -199,11 +204,9 @@ const styles = StyleSheet.create({
   },
   seeAllText: {
     color: "#6D28B9",
-    //color: "#743089",
     fontWeight: 800,
     borderBottomWidth: 1,
     borderColor: "#6D28B9",
-    //borderColor: "#743089",
   },
   seeAllBtn: {
     color: "#6D28B9"
@@ -211,10 +214,10 @@ const styles = StyleSheet.create({
   
   //Item cards
   itemsGrids: {
+    flex: 1,
     justifyContent: 'center',
     //alignItems: 'center',
     gap: 5,
-    paddingHorizontal: 5,
   },
   
   //Floating button

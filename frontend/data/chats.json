@@ -1,0 +1,304 @@
+{
+  "chats": [
+  {
+    "id": "chat_001",
+    "user": {
+      "id": "user_001",
+      "name": "Sarah Mokoena",
+      "avatar": "https://i.pravatar.cc/150?img=1",
+      "verified": false
+    },
+    "category": "Marketplace",
+    "lastMessage": "Is this still available?",
+    "lastMessageType": "text",
+    "lastMessageSender": "them",
+    "timestamp": "2026-07-01T10:00:00Z",
+    "unreadCount": 4
+  },
+  {
+    "id": "chat_002",
+    "user": {
+      "id": "user_002",
+      "name": "James Peterson",
+      "avatar": "https://i.pravatar.cc/150?img=2",
+      "verified": false
+    },
+    "category": "General",
+    "lastMessage": "Can you send more pictures?",
+    "lastMessageType": "text",
+    "lastMessageSender": "them",
+    "timestamp": "2026-07-01T07:00:00Z",
+    "unreadCount": 2
+  },
+  {
+    "id": "chat_003",
+    "user": {
+      "id": "user_003",
+      "name": "Lebo Khumalo",
+      "avatar": "https://i.pravatar.cc/150?img=3",
+      "verified": false
+    },
+    "category": "Marketplace",
+    "lastMessage": "Thanks bro \ud83d\ude4c",
+    "lastMessageType": "text",
+    "lastMessageSender": "me",
+    "timestamp": "2026-07-01T04:00:00Z",
+    "unreadCount": 4
+  },
+  {
+    "id": "chat_004",
+    "user": {
+      "id": "user_004",
+      "name": "Alicia Naidoo",
+      "avatar": "https://i.pravatar.cc/150?img=4",
+      "verified": false
+    },
+    "category": "General",
+    "lastMessage": "Payment received, thanks!",
+    "lastMessageType": "text",
+    "lastMessageSender": "them",
+    "timestamp": "2026-07-01T01:00:00Z",
+    "unreadCount": 4
+  },
+  {
+    "id": "chat_005",
+    "user": {
+      "id": "user_005",
+      "name": "Daniel Maseko",
+      "avatar": "https://i.pravatar.cc/150?img=5",
+      "verified": false
+    },
+    "category": "Marketplace",
+    "lastMessage": "See you tomorrow \ud83d\udc4b",
+    "lastMessageType": "text",
+    "lastMessageSender": "them",
+    "timestamp": "2026-06-30T22:00:00Z",
+    "unreadCount": 3
+  },
+  {
+    "id": "chat_006",
+    "user": {
+      "id": "user_006",
+      "name": "Emily Jacobs",
+      "avatar": "https://i.pravatar.cc/150?img=6",
+      "verified": false
+    },
+    "category": "General",
+    "lastMessage": "What's your best price?",
+    "lastMessageType": "text",
+    "lastMessageSender": "me",
+    "timestamp": "2026-06-30T19:00:00Z",
+    "unreadCount": 3
+  },
+  {
+    "id": "chat_007",
+    "user": {
+      "id": "user_007",
+      "name": "Michael Dlamini",
+      "avatar": "https://i.pravatar.cc/150?img=7",
+      "verified": false
+    },
+    "category": "Marketplace",
+    "lastMessage": "Hey, are you free later?",
+    "lastMessageType": "text",
+    "lastMessageSender": "them",
+    "timestamp": "2026-06-30T16:00:00Z",
+    "unreadCount": 4
+  },
+  {
+    "id": "chat_008",
+    "user": {
+      "id": "user_008",
+      "name": "Thando Sithole",
+      "avatar": "https://i.pravatar.cc/150?img=8",
+      "verified": false
+    },
+    "category": "General",
+    "lastMessage": "Is this still available?",
+    "lastMessageType": "text",
+    "lastMessageSender": "them",
+    "timestamp": "2026-06-30T13:00:00Z",
+    "unreadCount": 3
+  },
+  {
+    "id": "chat_009",
+    "user": {
+      "id": "user_009",
+      "name": "Nathan Williams",
+      "avatar": "https://i.pravatar.cc/150?img=9",
+      "verified": true
+    },
+    "category": "Marketplace",
+    "lastMessage": "Payment received, thanks!",
+    "lastMessageType": "text",
+    "lastMessageSender": "me",
+    "timestamp": "2026-06-30T10:00:00Z",
+    "unreadCount": 4
+  },
+  {
+    "id": "chat_010",
+    "user": {
+      "id": "user_010",
+      "name": "Zanele Ncube",
+      "avatar": "https://i.pravatar.cc/150?img=10",
+      "verified": false
+    },
+    "category": "General",
+    "lastMessage": "Can you send more pictures?",
+    "lastMessageType": "text",
+    "lastMessageSender": "them",
+    "timestamp": "2026-06-30T07:00:00Z",
+    "unreadCount": 4
+  },
+  {
+    "id": "chat_011",
+    "user": {
+      "id": "user_011",
+      "name": "Brian Molefe",
+      "avatar": "https://i.pravatar.cc/150?img=11",
+      "verified": false
+    },
+    "category": "Marketplace",
+    "lastMessage": "See you tomorrow \ud83d\udc4b",
+    "lastMessageType": "text",
+    "lastMessageSender": "them",
+    "timestamp": "2026-06-30T04:00:00Z",
+    "unreadCount": 1
+  },
+  {
+    "id": "chat_012",
+    "user": {
+      "id": "user_012",
+      "name": "Keisha Adams",
+      "avatar": "https://i.pravatar.cc/150?img=12",
+      "verified": false
+    },
+    "category": "General",
+    "lastMessage": "Payment received, thanks!",
+    "lastMessageType": "text",
+    "lastMessageSender": "me",
+    "timestamp": "2026-06-30T01:00:00Z",
+    "unreadCount": 4
+  },
+  {
+    "id": "chat_013",
+    "user": {
+      "id": "user_013",
+      "name": "Sipho Ndlovu",
+      "avatar": "https://i.pravatar.cc/150?img=13",
+      "verified": false
+    },
+    "category": "Marketplace",
+    "lastMessage": "What's your best price?",
+    "lastMessageType": "text",
+    "lastMessageSender": "them",
+    "timestamp": "2026-06-29T22:00:00Z",
+    "unreadCount": 3
+  },
+  {
+    "id": "chat_014",
+    "user": {
+      "id": "user_014",
+      "name": "Ayesha Khan",
+      "avatar": "https://i.pravatar.cc/150?img=14",
+      "verified": false
+    },
+    "category": "General",
+    "lastMessage": "I'm interested.",
+    "lastMessageType": "text",
+    "lastMessageSender": "them",
+    "timestamp": "2026-06-29T19:00:00Z",
+    "unreadCount": 1
+  },
+  {
+    "id": "chat_015",
+    "user": {
+      "id": "user_015",
+      "name": "Chris van Wyk",
+      "avatar": "https://i.pravatar.cc/150?img=15",
+      "verified": true
+    },
+    "category": "Marketplace",
+    "lastMessage": "What's your best price?",
+    "lastMessageType": "text",
+    "lastMessageSender": "me",
+    "timestamp": "2026-06-29T16:00:00Z",
+    "unreadCount": 4
+  },
+  {
+    "id": "chat_016",
+    "user": {
+      "id": "user_016",
+      "name": "Nomsa Zulu",
+      "avatar": "https://i.pravatar.cc/150?img=16",
+      "verified": false
+    },
+    "category": "General",
+    "lastMessage": "I'm interested.",
+    "lastMessageType": "text",
+    "lastMessageSender": "them",
+    "timestamp": "2026-06-29T13:00:00Z",
+    "unreadCount": 3
+  },
+  {
+    "id": "chat_017",
+    "user": {
+      "id": "user_017",
+      "name": "Jason Smith",
+      "avatar": "https://i.pravatar.cc/150?img=17",
+      "verified": false
+    },
+    "category": "Marketplace",
+    "lastMessage": "What's your best price?",
+    "lastMessageType": "text",
+    "lastMessageSender": "them",
+    "timestamp": "2026-06-29T10:00:00Z",
+    "unreadCount": 0
+  },
+  {
+    "id": "chat_018",
+    "user": {
+      "id": "user_018",
+      "name": "Faith Mahlangu",
+      "avatar": "https://i.pravatar.cc/150?img=18",
+      "verified": false
+    },
+    "category": "General",
+    "lastMessage": "Hey, are you free later?",
+    "lastMessageType": "text",
+    "lastMessageSender": "me",
+    "timestamp": "2026-06-29T07:00:00Z",
+    "unreadCount": 2
+  },
+  {
+    "id": "chat_019",
+    "user": {
+      "id": "user_019",
+      "name": "Ryan Botha",
+      "avatar": "https://i.pravatar.cc/150?img=19",
+      "verified": false
+    },
+    "category": "Marketplace",
+    "lastMessage": "Thanks bro \ud83d\ude4c",
+    "lastMessageType": "text",
+    "lastMessageSender": "them",
+    "timestamp": "2026-06-29T04:00:00Z",
+    "unreadCount": 1
+  },
+  {
+    "id": "chat_020",
+    "user": {
+      "id": "user_020",
+      "name": "Precious Mthembu",
+      "avatar": "https://i.pravatar.cc/150?img=20",
+      "verified": false
+    },
+    "category": "General",
+    "lastMessage": "Thanks bro \ud83d\ude4c",
+    "lastMessageType": "text",
+    "lastMessageSender": "them",
+    "timestamp": "2026-06-29T01:00:00Z",
+    "unreadCount": 3
+  }
+]
+}

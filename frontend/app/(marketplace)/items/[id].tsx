@@ -17,6 +17,8 @@ import laptop from "../../../assets/images/laptop.jpg";
 import { Colors } from "../../../constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
 
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+
 import MarketHook from "../../../hooks/MarketHook";
 
 const itemScreen = () => {
@@ -54,9 +56,13 @@ const itemScreen = () => {
     e.preventDefault();
   }
   
+  const insets = useSafeAreaInsets();
+  
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-    <ScrollView style={[{backgroundColor: theme.background}, styles.container]}>
+    <ScrollView
+    showsVerticalScrollIndicator={false}
+    style={[{backgroundColor: theme.background, paddingBottom: insets.bottom}, styles.container]}>
       
       <ThemedView style={styles.infoContainer}>
         
@@ -224,6 +230,7 @@ const itemScreen = () => {
             multiline={true}
             maxLength={500}
             blurOnSubmit={false}
+          //placeholder="Message seller"
           value={message}
           onChangeText={setMessage}
           />
@@ -238,13 +245,23 @@ const itemScreen = () => {
         <View style={styles.descriptionWrapper}>
           <ThemedText title={true}
           style={styles.descTitle}>
-            description
+            Description
           </ThemedText>
           <ThemedText style={styles.descText}>
             {item.description}
           </ThemedText>
         </View>
-        
+      </ThemedView>
+      
+      <ThemedView style={[{paddingBottom: insets.bottom + 20} ,styles.safetyContainer]}>
+          <ThemedText title={true}
+          style={styles.safetyTitle}>
+            Safety Note
+          </ThemedText>
+        <ThemedText style={styles.safetyText}>
+          Meet in a public place on campus.
+          Never pay before inspecting the item.
+        </ThemedText>
       </ThemedView>
       
     </ScrollView>
@@ -256,7 +273,7 @@ export default itemScreen;
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 10,
+    paddingHorizontal: 0,
   },
   infoContainer: {
     paddingVertical: 10,
@@ -266,7 +283,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: 10,
-    marginBottom: 10
+    marginBottom: 10,
+    paddingHorizontal: 10,
   },
   avatar: {
     width: 50,
@@ -298,7 +316,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    gap: 20
+    gap: 20,
+    paddingHorizontal: 10,
   },
   chip: {
     backgroundColor: '#d6d6d6',
@@ -318,16 +337,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 5,
     paddingTop: 10,
+    paddingHorizontal: 10,
   },
   image: {
-    width: 200,
+    width: 250,
     height: 200,
     borderRadius: 10,
   },
+  //Item name and price
   itemInfo: {
     flexDirection: 'column',
     gap: 2,
     paddingTop: 10,
+    paddingHorizontal: 15,
   },
   title: {
     fontWeight: '600',
@@ -342,12 +364,14 @@ const styles = StyleSheet.create({
   //Details starts here
   detailsContainer: {
     paddingHorizontal: 5,
-    marginBottom: 50,
+    marginBottom: 20,
+    paddingHorizontal: 15,
   },
   buttons: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 20
+    gap: 30,
+    paddingTop: 5,
   },
   button: {
     alignItems: 'center',
@@ -355,8 +379,8 @@ const styles = StyleSheet.create({
   },
   icon: {
     backgroundColor: "#d9d9d9",
-    paddingHorizontal: 10,
-    paddingVertical: 10,
+    paddingHorizontal: 6,
+    paddingVertical: 6,
     borderRadius: 100
   },
   iconName: {
@@ -398,5 +422,13 @@ const styles = StyleSheet.create({
   descTitle: {
     fontWeight: 'bold',
     fontSize: 16,
-  }
+  },
+  //Safety note
+  safetyContainer: {
+    paddingHorizontal: 15
+  },
+  safetyTitle: {
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
 });

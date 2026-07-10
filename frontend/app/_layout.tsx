@@ -2,6 +2,10 @@ import { FeedsContextProvider }
 from '../contexts/FeedsContext';
 import { MarketContextProvider }
 from '../contexts/MarketContext';
+import { ChatsContextProvider }
+from '../contexts/ChatsContext';
+import { UserContextProvider }
+from '../contexts/UserContext';
 
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
@@ -21,8 +25,10 @@ const RootLayout = ()=> {
 
   return (
     <>
+      <ChatsContextProvider>
       <FeedsContextProvider>
       <MarketContextProvider>
+      <UserContextProvider>
       <SafeAreaProvider>
       <StatusBar style="dark-content" hidden={false}/>
       <Stack screenOptions = {{
@@ -45,10 +51,14 @@ const RootLayout = ()=> {
         
         <Stack.Screen name="(home)" options={{headerShown: false}} />
         
+        <Stack.Screen name="chats" options={{headerShown: false}} />
+        
       </Stack>
       </SafeAreaProvider>
+      </UserContextProvider>
       </MarketContextProvider>
       </FeedsContextProvider>
+      </ChatsContextProvider>
     </>
 )
 }

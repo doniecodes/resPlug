@@ -50,7 +50,7 @@ const Login = () => {
         Email:
       </ThemedText>
       <ThemedTextInput
-      style={styles.textInput}
+      style={[{borderWidth: 1.5, borderColor: Colors.primary}, styles.textInput]}
       name="email"
       placeholder="Email address"
       value={email}
@@ -66,7 +66,7 @@ const Login = () => {
         Password:
       </ThemedText>
       <ThemedTextInput
-      style={styles.textInput}
+      style={[{borderWidth: 1.5, borderColor: Colors.primary}, styles.textInput]}
       name="password"
       placeholder="Password"
       value={password}
@@ -88,9 +88,9 @@ const Login = () => {
       <Spacer height={20} />
       
       <ThemedText style={styles.flex}>
-        Don't have an account?
-        <Link href="/signup" style={[{borderBottomColor: underlineColor}, styles.linked]}>
-          <ThemedText style={{fontWeight:"bold"}}>  Signup </ThemedText>
+        New to resPlug?
+        <Link href="/signup" style={styles.linked}>
+          <ThemedText title={true} style={{borderBottomWidth: 1, borderBottomColor: theme.title, fontWeight:"bold"}}>  Signup </ThemedText>
         </Link>
       </ThemedText>
       
@@ -118,7 +118,8 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1
   },
   textInput: {
-    width: "80%"
+    width: "80%",
+    borderRadius: 50,
   },
   label: {
     width: "80%",

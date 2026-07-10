@@ -15,7 +15,7 @@ import { Ionicons } from "@expo/vector-icons"
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 
-const HeaderMarketplace = () => {
+const HeaderComponent = ({title, icon}) => {
   
   //States
   const [focused, setFocused] = useState(false);
@@ -32,23 +32,25 @@ const HeaderMarketplace = () => {
   return (
     <>
     <ThemedView
-    style={styles.header}>
+    style={[{paddingTop: insets.top}, styles.header]}>
       
       <ThemedText
       title={true} style={styles.title}>
-        Marketplace
+        {title}
       </ThemedText>
       
-      <View style={styles.menu}>
-        <Pressable>
-        <Ionicons
-        style={styles.icon}
-        size={28}
-        name={focused ? "notifications" : "notifications-outline"}
-        color={focused ? theme.iconColorFocused : theme.iconColorFocused}
-        />
-        </Pressable>
-      </View>
+      {icon && 
+        <View style={styles.menu}>
+          <Pressable style={({pressed})=> [styles.btn, pressed && styles.pressed]}>
+            <Ionicons
+            style={styles.icon}
+            size={28}
+            name={`${icon}-outline`}
+            color={focused ? theme.iconColorFocused : theme.iconColorFocused}
+            />
+          </Pressable>
+        </View>
+      }
       
     </ThemedView>
     
@@ -56,7 +58,7 @@ const HeaderMarketplace = () => {
   );
 };
 
-export default HeaderMarketplace;
+export default HeaderComponent;
 
 const styles = StyleSheet.create({
   header: {
@@ -72,5 +74,8 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: 'bold',
     fontSize: 25,
+  },
+  pressed: {
+    opacity: 0.5
   }
 });

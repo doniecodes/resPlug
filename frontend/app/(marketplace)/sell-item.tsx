@@ -97,6 +97,9 @@ const SellItemScreen = () => {
   
   return (
     <>
+    <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        style={{ flex: 1 }}>
       <ThemedView
       style={[{
         paddingTop: insets.top
@@ -208,9 +211,6 @@ const SellItemScreen = () => {
           </ThemedText>
         </View>
         
-        <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-        style={{ flex: 1 }}>
         <View style={styles.itemInfoContainer}>
           <View style={styles.formGroup}>
             <Text style={[{color: theme.resIconColor}, styles.label]}>
@@ -277,9 +277,9 @@ const SellItemScreen = () => {
             />
           </View>
         </View>
-        </KeyboardAvoidingView>
       </ThemedView>
       </ScrollView>
+    </KeyboardAvoidingView>
       
           <ThemedView style={[{paddingBottom: insets.bottom}, styles.submitBtnWrapper]}>
             <Pressable
@@ -302,6 +302,7 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 10,
     backgroundColor: "#f8f8f8",
+    position: "relative",
   },
   header: {
     paddingHorizontal: 10,
@@ -373,7 +374,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     gap: 20,
-    paddingBottom: 20,
+    paddingBottom: 80,
   },
   formGroup: {
     borderRadius: 10,
@@ -399,8 +400,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#f8f8f8',
     paddingTop: 20,
     paddingHorizontal: 10,
-    position: 'fixed',
+    position: 'absolute',
     bottom: 0,
+    left: 0,
+    right: 0,
     borderTopWidth: 1.5,
     borderColor: '#d5d5d5',
   },

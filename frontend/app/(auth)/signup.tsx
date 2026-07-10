@@ -51,7 +51,7 @@ const signup = () => {
         Full Name:
       </ThemedText>
       <ThemedTextInput
-      style={styles.textInput}
+      style={[{borderWidth: 1.5, borderColor: Colors.primary}, styles.textInput]}
       name="fullName"
       placeholder="Full Name"
       value={fullName}
@@ -63,7 +63,7 @@ const signup = () => {
         Email:
       </ThemedText>
       <ThemedTextInput
-      style={styles.textInput}
+      style={[{borderWidth: 1.5, borderColor: Colors.primary}, styles.textInput]}
       name="email"
       placeholder="Email address"
       value={email}
@@ -79,7 +79,7 @@ const signup = () => {
         Password:
       </ThemedText>
       <ThemedTextInput
-      style={styles.textInput}
+      style={[{borderWidth: 1.5, borderColor: Colors.primary}, styles.textInput]}
       name="password"
       placeholder="Password"
       value={password}
@@ -100,7 +100,7 @@ const signup = () => {
       
       <Spacer height={20} />
       <ThemedText>
-        Already have an account?
+        resPlug user?
         <Link href="/login" style={[{borderBottomColor: underlineColor}, styles.linked]}>
           <ThemedText style={{fontWeight: "bold"}}>  Login</ThemedText>
         </Link>
@@ -128,7 +128,8 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1
   },
   textInput: {
-    width: "80%"
+    width: "80%",
+    borderRadius: 50,
   },
   label: {
     width: "80%",

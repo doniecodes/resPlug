@@ -9,14 +9,20 @@ import HeaderProfile from '../../components/HeaderProfile';
 
 import ThemedText from '../../components/ThemedText';
 import ThemedView from '../../components/ThemedView';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, useColorScheme } from 'react-native';
+import { Colors } from '../../constants/Colors';
 import { globalStyles } from '../../styles/global.ts';
 
-import { Tabs } from "react-native-collapsible-tab-view";
+import { Tabs, MaterialTabBar } from "react-native-collapsible-tab-view";
 
 
 
 const Profile = () => {
+  
+  //theme
+  const colorScheme = useColorScheme();
+  //const theme = Colors[colorScheme] ?? Colors.light;
+  const theme = Colors.light;
   
   //profile header
   const ProfileHeader = () => {
@@ -35,23 +41,35 @@ const Profile = () => {
     <>
       <Tabs.Container
       renderHeader={()=> <ProfileHeader />}
-      tabBarProps={{
-        activeColor: "#7C3AED",
-        inactiveColor: "#999",
-      }} >
-        <Tabs.Tab name="Posts">
+      renderTabBar={(props) => (
+    <MaterialTabBar
+      {...props}
+      activeColor="#6D28B9"
+      inactiveColor={theme.text}
+      inactiveOpacity={0.7}
+      labelStyle={styles.tabLabel}
+      indicatorStyle={[{
+          backgroundColor: theme.resIconColor,
+        }, styles.tabIndicator]}
+      style={styles.tabBar}
+      scrollEnabled={false}
+      tabStyle={{paddingHorizontal: 3}}
+      />
+      )}
+      >
+        <Tabs.Tab name="Posts" label="Posts">
           <PostsTab />
         </Tabs.Tab>
         
-        <Tabs.Tab name="Marketplace">
+        <Tabs.Tab name="Marketplace" label="Marketplace">
           <MarketplaceTab />
         </Tabs.Tab>
         
-        <Tabs.Tab name="Events">
+        <Tabs.Tab name="Events" label="Events">
           <EventsTab />
         </Tabs.Tab>
         
-        <Tabs.Tab name="About">
+        <Tabs.Tab name="About" label="About">
           <AboutTab />
         </Tabs.Tab>
         
@@ -65,6 +83,14 @@ export default Profile;
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 10,
-    backgroundColor: '#f8f8f8',
+  },
+  tabLabel: {
+    fontWeight: '500'
+  },
+  tabIndicator: {
+    
+  },
+  tabBar: {
+    
   }
 });

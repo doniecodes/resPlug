@@ -8,7 +8,7 @@ import { Colors } from '../constants/Colors'
 
 import { useState } from "react"
 
-const SearchBox = ({ placeholder, width="80%" }) => {
+const SearchBox = ({ handleSearch, placeholder, width="80%", fixed=false }) => {
   
   //states
     const [term, setTerm] = useState("");
@@ -19,13 +19,8 @@ const SearchBox = ({ placeholder, width="80%" }) => {
   //const theme = Colors[colorScheme] ?? Colors.light;
   const theme = Colors.light;
   
-  //Handle search
-  const handleSearch = async ()=> {
-    
-  }
-  
   return (
-    <View style={styles.searchWrapper}>
+    <View style={[styles.searchWrapper, fixed && styles.fixed]}>
     <ThemedView style={styles.searchContainer}>
         <TextInput
         style={[{width: width}, styles.searchInput]}
@@ -73,5 +68,5 @@ const styles = StyleSheet.create({
   searchInput: {
     borderRadius: 50,
     color: "#201e2b",
-  }
+  },
 });

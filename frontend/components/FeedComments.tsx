@@ -16,7 +16,6 @@ import doniecode from "../assets/images/doniecode.png";
 const FeedComments = ({feed}) => {
   
     const [ liked, setLiked ] = useState(false);
-    const [ inputValue, setInputValue ] = useState("");
   
    //colorScheme
   const colorScheme = useColorScheme();
@@ -24,7 +23,6 @@ const FeedComments = ({feed}) => {
   const theme = Colors.light;
   
     //description read more function
-  const insets = useSafeAreaInsets();
   
   return (
     <>
