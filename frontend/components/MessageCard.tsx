@@ -27,21 +27,23 @@ export default MessageCard;
 
 const styles = StyleSheet.create({
   themMessage: {
+    maxWidth: "90%",
     backgroundColor: '#717b89',
     paddingVertical: 6,
     paddingHorizontal: 10,
-    borderRadius: 50,
+    borderRadius: 10,
     color: "#fff",
     alignSelf: 'flex-start',
   },
   
   meMessage: {
+    maxWidth: "90%",
     alignSelf: 'flex-end',
     backgroundColor: '#6D28B9',
     paddingVertical: 6,
     paddingHorizontal: 10,
     color: "#fff",
-    borderRadius: 50,
+    borderRadius: 10,
   },
   
 });

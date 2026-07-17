@@ -1,7 +1,5 @@
-import { StyleSheet, Text,
-Keyboard, TouchableWithoutFeedback,
-  useColorScheme
-} from 'react-native';
+import { StyleSheet, Text, Image, View,
+useColorScheme, Pressable, Keyboard, TouchableWithoutFeedback } from 'react-native';
 import { useState } from "react";
 
 import { Colors } from "../../constants/Colors";
@@ -15,26 +13,39 @@ import ThemedView from '../../components/ThemedView';
 
 import UserForms from "../../hooks/UserForms";
 
+import { Ionicons } from "@expo/vector-icons"
+
+import GoogleImage from "../../assets/images/google.png"
+
+
 const Login = () => {
   
   //colorscheme
   const colorScheme = useColorScheme()
-  const theme = Colors[colorScheme] ?? Colors.light;  
+  //const theme = Colors[colorScheme] ?? Colors.light;  
+  const theme = Colors.light;  
   
   //states
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [fullName, setFullName] = useState("");
+  
   
   //hooks
   const { loginUser, error, loading } = UserForms();
   
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    await loginUser(email, password);
+  const handleSubmit = async () => {
+    const username = email && email.split("@")[0];
+    const full_name = email && email.split("@")[0];
+    console.log(email);
+    console.log(password);
+    console.log(username);
+    console.log(full_name);
+    //await loginUser(id, email, password, username);
     }
     
-    const underlineColor = colorScheme === "dark" ? "#fff" : "#111";
+    const handleGoogleSubmit = async ()=> {
+    
+  }
   
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
@@ -50,7 +61,7 @@ const Login = () => {
         Email:
       </ThemedText>
       <ThemedTextInput
-      style={[{borderWidth: 1.5, borderColor: Colors.primary}, styles.textInput]}
+      style={[{borderWidth: 1.5, borderColor: Colors.primary, color: theme.title}, styles.textInput]}
       name="email"
       placeholder="Email address"
       value={email}
@@ -66,7 +77,7 @@ const Login = () => {
         Password:
       </ThemedText>
       <ThemedTextInput
-      style={[{borderWidth: 1.5, borderColor: Colors.primary}, styles.textInput]}
+      style={[{borderWidth: 1.5, borderColor: Colors.primary, color: theme.title}, styles.textInput]}
       name="password"
       placeholder="Password"
       value={password}
@@ -85,14 +96,35 @@ const Login = () => {
         <Text style={{color: "#fff"}}>Login</Text>
       </ThemedButton>
       
-      <Spacer height={20} />
+      <View style={styles.orContainer}>
+        <View style={styles.line} />
+        <Text style={styles.orText}>OR</Text>
+        <View style={styles.line} />
+      </View>
       
-      <ThemedText style={styles.flex}>
-        New to resPlug?
-        <Link href="/signup" style={styles.linked}>
-          <ThemedText title={true} style={{borderBottomWidth: 1, borderBottomColor: theme.title, fontWeight:"bold"}}>  Signup </ThemedText>
+      <Spacer height={10} />
+      <Pressable
+      style={({pressed})=> [styles.googleBtn, pressed && styles.pressed]}
+      onPress={handleGoogleSubmit}>
+        <Image
+        style={styles.googleImage}
+        source={GoogleImage}
+        />
+        <ThemedText style={styles.googleBtnText}>
+          Continue with Google
+        </ThemedText>
+      </Pressable>
+      
+      <Spacer height={20} />
+      <View style={styles.flex}>
+        <ThemedText>
+          New to resPlug?
+        </ThemedText>
+        <Link href="/signup">
+          <ThemedText title={true} style={{fontWeight:"bold"}}> Signup
+          </ThemedText>
         </Link>
-      </ThemedText>
+      </View>
       
     </ThemedView>
     </TouchableWithoutFeedback>
@@ -114,9 +146,6 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     fontWeight: 'bold',
   },
-  linked: {
-    borderBottomWidth: 1
-  },
   textInput: {
     width: "80%",
     borderRadius: 50,
@@ -128,5 +157,47 @@ const styles = StyleSheet.create({
   },
   error: {
     color: "red"
+  },
+  flex: {
+    flexDirection: 'row',
+  },
+  
+  /// OR ///
+  orContainer: {
+    width: "80%",
+    flexDirection: "row",
+    alignItems: "center",
+    marginVertical: 15,
+  },
+
+  line: {
+    flex: 1,
+    height: 1,
+    backgroundColor: "#d4d4d4",
+  },
+
+  orText: {
+    marginHorizontal: 16,
+    color: "#6B7280",
+    fontSize: 16,
+    fontWeight: "600",
+  },
+  googleImage: {
+    width: 30,
+    height: 30
+  },
+  googleBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 15,
+    borderWidth: 1.5,
+    borderColor: "#d4d4d4",
+    borderRadius: 6,
+    paddingVertical: 18,
+    paddingHorizontal: 18,
+  },
+  pressed: {
+    opacity: 0.5
   }
 });

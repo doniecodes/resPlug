@@ -1,5 +1,8 @@
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
+import UseUserContext from './UseUserContext';
+
+import { supabase } from "../data/SupabaseConfig";
 
 const UserForms = () => {
   
@@ -9,44 +12,70 @@ const UserForms = () => {
   const router = useRouter();
   
   //hooks
+  const { dispatch } = UseUserContext();
   
+  const handleErrors = (email, password)=> {
+    if(!email || !password){
+      setError("Please fill in all fields");
+    }
+  }
   
   //signupUser
-  const signupUser = async (email, password, fullName)=> {
+  const signupUser = async (id, email, password, username)=> {
     setLoading(true);
     setError(null);
-    const res = await fetch("http://localhost:8000/user/", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({email, password, fullName})
-      });
-      
-      const data = await res.json();
-      
-      if(!res.ok){
+    
+    handleErrors(email, password);
+    
+    try{
+    const { data, error } = await supabase
+    .from("profiles")
+    .insert([{id, email, password, username}]);
+    
+      if(error){
         setLoading(false);
-        setError(data.error);
+        setError("Could not sign you up, check credentials");
       }
-      return data;
+      if(data){
+        console.log(data);
+        setLoading(false);
+        setError(null);
+        dispatch({type: "LOGIN", payload: data})
+      }
+    } catch (error) {
+      setLoading(false);
+      setError("There was a problem signing you up, please try again later");
+    }
   }
   
   //loginUser
-  const loginUser = async (email, password)=> {
+  const loginUser = async (email, password) => {
     setLoading(true);
     setError(null);
-    const res = await fetch("http://localhost:8000/user/", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({email, password})
-      });
-      
-      const data = await res.json();
-      
-      if(!res.ok){
+    
+    if(!email || !password){
+      setError("Please fill in all fields");
+    }
+    
+    try{
+    const { data, error } = await supabase
+    .from("profiles")
+    .select()
+    .eq("email", email);
+    
+      if(error){
         setLoading(false);
-        setError(data.error);
+        setError("Could not log in, user not found");
       }
-      return data;
+      if(data){
+        setLoading(false);
+        setError(null);
+        dispatch({type: "LOGIN", payload: data.email})
+      }
+    } catch (error) {
+      setLoading(false);
+      setError("There was a problem signing you up, please try again later");
+    }
   }
   
   // delete user 

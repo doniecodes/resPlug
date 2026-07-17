@@ -1,6 +1,8 @@
 import { View, Text } from 'react-native';
 import { createContext } from 'react';
 import { useReducer } from 'react';
+import { useEffect } from 'react';
+import { AsyncStorage } from "@react-native-async-storage/async-storage";
 
 export const UserContext = createContext();
 
@@ -22,6 +24,16 @@ export const userReducer = (state, action)=> {
 export const UserContextProvider = ({children}) => {
   
   const [state, dispatch] = useReducer(userReducer, {user: null});
+  
+  console.log(state);
+  
+  useEffect(()=> {
+    // const getData = async()=> {
+    // const dataToRetrieve = await AsyncStorage.getItem("user");
+    // const data = dataToRetrieve != null && JSON.parse(dataToRetrieve)
+    // dispatch({type: "SET_USER", payload: data});
+    // }
+  }, [])
   
   
   return (

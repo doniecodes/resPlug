@@ -13,6 +13,7 @@ import { Colors } from '../../constants/Colors';
 import { useColorScheme, FlatList, TouchableWithoutFeedback, Keyboard, KeyboardAvoidingView, Platform, TextInput } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams } from "expo-router";
+import { Tabs } from "react-native-collapsible-tab-view";
 import { useEffect, useState } from "react";
 
 
@@ -66,7 +67,8 @@ const ChatDetails = () => {
   const ScreenHeader = ()=> (
     <>
     { chat &&
-    <ThemedView style={[{}, styles.header]}>
+    <ThemedView style={[{paddingTop: insets.top},
+    styles.header]}>
       <Pressable
         style={({pressed})=> [styles.btn, pressed && styles.iconPressed]}>
       <Link href="..">
@@ -119,16 +121,17 @@ const ChatDetails = () => {
   
   return (
     <>
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+
       <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}
       style={{flex: 1}}>
+        
+        <ScreenHeader />
     
     {/*Messages List*/}
       <FlatList
-      ListHeaderComponent={ScreenHeader}
-      showsVerticallScrollIndicator={false}
-      contentContainerStyle={[{backgroundColor: theme.background ,paddingTop: insets.top, paddingBottom: insets.bottom}, styles.messages]}
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={[{backgroundColor: theme.background ,paddingTop: insets.top, paddingBottom: insets.bottom + 90}, styles.messages]}
       keyExtractor={(item) => item.id}
       data={conversation && conversation.messages}
       renderItem={({item})=> (
@@ -145,7 +148,7 @@ const ChatDetails = () => {
       />
       
       <ThemedView style={[{
-      paddingBottom: insets.bottom + 5},
+      paddingBottom: insets.bottom},
       styles.addMessageWrapper]}>
         <View style={[{backgroundColor: theme.resIconColor},
         styles.inputWrapper, messageValue && styles.hasMessage]}>
@@ -178,9 +181,7 @@ const ChatDetails = () => {
           </View>
         </Pressable>
       </ThemedView>
-      
     </KeyboardAvoidingView>
-    </TouchableWithoutFeedback>
     </>
   );
 };
@@ -227,7 +228,7 @@ const styles = StyleSheet.create({
   //messages
   messages: {
     paddingHorizontal: 15,
-    gap: 20
+    gap: 10
   },
   //pressed icon style
   iconPressed: {
